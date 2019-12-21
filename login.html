@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+	<title>Είσοδος/Εγγραφή</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+ <!-- Core Stylesheet -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- Responsive CSS -->
+    <link href="css/responsive/responsive.css" rel="stylesheet">
+<body>  
+ 
+ </head>
+    <!-- ***** Header Area Start ***** -->
+    <header class="header_area" id="header">
+        <div class="container-fluid h-100">
+            <div class="row h-100">
+                <div class="col-12 h-100">
+                    <nav class="h-100 navbar navbar-expand-lg">
+                        <a class="navbar-brand" href="index.html"><img src="img/oasa_logo_bot.png" style="width:12em; height:4em;"></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dorneNav" aria-controls="dorneNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
+                        <!-- Nav -->
+                        <div class="collapse navbar-collapse" id="dorneNav">
+                            <ul class="navbar-nav mr-auto" id="dorneMenu">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="index.html">Αρχική <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Δρομολόγια <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="index.html">Μετρό</a>
+                                        <a class="dropdown-item" href="explore.html">Τραμ</a>
+                                        <a class="dropdown-item" href="listing.html">Ηλεκτρικός Σιδηρόδρομος</a>
+                                        <a class="dropdown-item" href="single-listing.html">Προαστιακός</a>
+                                        <a class="dropdown-item" href="contact.html">Τρόλεϊ</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Listings <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                                        <a class="dropdown-item" href="index.html">Home</a>
+                                        <a class="dropdown-item" href="explore.html">Explore</a>
+                                        <a class="dropdown-item" href="listing.html">Listing</a>
+                                        <a class="dropdown-item" href="single-listing.html">Single Listing</a>
+                                        <a class="dropdown-item" href="contact.html">Contact</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.html">Contact</a>
+                                </li>
+                            </ul>
+                            <!-- Search btn -->
+                            <div class="dorne-search-btn">
+                                <a id="search-btn" href="#"><i class="fa fa-search" aria-hidden="true"></i> Search</a>
+                            </div>
+                            <!-- Signin btn -->
+                            <div class="dorne-signin-btn">
+                                <a href="login.html">Sign in  or Register</a>
+                            </div>
+                            <!-- Add listings btn -->
+                            <div class="dorne-add-listings-btn">
+                                <a href="#" class="btn dorne-btn">+ Add Listings</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url('images/athens.jpg') ;">
+			<div class="wrap-login100 p-l-30 p-r-30 p-t-10 p-b-10">
+				<form class="login100-form validate-form flex-sb flex-w">
+					<span class="login100-form-title p-b-33">
+						Συνδεθείτε:
+					</span>
+
+					<a href="https://www.facebook.com/" class="btn-face m-b-20">
+						<i class="fa fa-facebook-official"></i>
+						Facebook
+					</a>
+
+					<a href="#" class="btn-google m-b-20">
+						<img src="images/icons/icon-google.png" alt="GOOGLE">
+						Google
+					</a>
+					
+					<div class="p-t-31 p-b-9">
+						<span class="txt1">
+							Όνομα χρήστη:
+						</span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate = "Username is required">
+						<input class="input100" type="text" name="username" >
+						<span class="focus-input100"></span>
+					</div>
+					
+					<div class="p-t-13 p-b-9">
+						<span class="txt1">
+							Κωδικός:
+						</span>
+
+					</div>
+					<div class="wrap-input100 validate-input" data-validate = "Password is required">
+						<input class="input100" type="password" name="pass" >
+						<span class="focus-input100"></span>
+					</div>
+                    <a href="#" class="txt2 bo1 m-l-5">
+							Ξέχασες των κωδικό σου;
+						</a>
+
+					<div class="container-login100-form-btn m-t-17">
+						<button class="login100-form-btn">
+							Σύνδεση
+						</button>
+					</div>
+
+					<div class="w-full text-center p-t-55">
+						<span class="txt2">
+							Δεν είσαι μέλος;
+						</span>
+
+						<a href="signup.html" class="txt2 bo1">
+							Εγγραφή!
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+
+	<div id="dropDownSelect1"></div>
+	
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+</html>
