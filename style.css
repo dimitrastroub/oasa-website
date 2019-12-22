@@ -268,12 +268,13 @@ li {
 .section-heading {
     position: relative;
     z-index: 1;
-    margin-bottom: 100px;
+    margin-bottom: 1px;
+    margin-top: 15px;
 }
 
 .section-heading span {
     width: 30px;
-    height: 2px;
+    height: 12px;
     background-color: #fff;
     margin: 0 auto 15px;
     display: block;
@@ -281,9 +282,9 @@ li {
 
 .section-heading h4 {
     font-weight: 800;
-    line-height: 1;
+    line-height: 12;
     color: #fff;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
     text-transform: uppercase;
 }
 
@@ -507,9 +508,22 @@ li {
     border: none;
 }
 
+.dropdown-item,
+.dropdown-item2{
+	position: relative;
+	
+}
+
 .dropdown-item {
     font-weight: 600;
     font-size: 14px;
+}
+
+.dropdown-item2 {
+    font-weight: 600;
+    font-size: 14px;
+	left: 111.px;
+	bottom: 41.px;
 }
 
 .dropdown-item:hover {
@@ -560,7 +574,7 @@ li {
 }
 
 .hero-search-form {
-    margin-top: 90px;
+    margin-top: 50px;
     position: relative;
     z-index: 1;
 }
@@ -747,7 +761,9 @@ li {
 .single-editors-pick-area {
     position: relative;
     z-index: 1;
-    margin-bottom: 20px;
+   # margin-top: 1px;
+   # margin-bottom: 20px;
+	padding-top: 0px;
 }
 
 .editors-pick-info {
