@@ -540,7 +540,7 @@ outline: 0px solid #000000;
 /* Header & Menu Area CSS */
 
 .header_area {
-    position: fixed;
+    position: absolute;
     width: 100%;
     z-index: 9999;
     height: 120px;
@@ -551,6 +551,7 @@ outline: 0px solid #000000;
     transition-duration: 700ms;
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
     padding: 0 30px;
+	background-color: rgba(0,0,172,0.1);
 }
 
 .sticky .header_area {
@@ -558,6 +559,7 @@ outline: 0px solid #000000;
     height: 100px;
     z-index: 9999;
     border-bottom: 1px solid transparent;
+	
 }
 
 .navbar-brand {
@@ -569,6 +571,7 @@ outline: 0px solid #000000;
 
 .navbar-brand:hover,
 .navbar-brand:focus {
+	
     color: #fff;
     font-weight: 700;
 }
@@ -578,6 +581,7 @@ outline: 0px solid #000000;
     padding-left: 15px;
     color: #fff;
     font-size: 15px;
+	
 }
 
 .navbar-nav .nav-link:hover,
@@ -686,7 +690,7 @@ outline: 0px solid #000000;
     font-size: 12px;
     font-weight: 700;
     color: #fff;
-    background-color: rgba(144, 103, 238, 0.65);
+    background-color: rgba(187, 168, 219, 0.65);
     text-transform: uppercase;
     min-width: 100px;
     height: 44px;
@@ -697,13 +701,13 @@ outline: 0px solid #000000;
 
 .hero-search-form .nav-tabs .nav-link.active {
     color: #fff;
-    background-color: rgba(67, 25, 161, 0.65);
+    background-color: rgba(129, 40, 91, 0.65);
     border-color: transparent;
 }
 
 .hero-search-form .tab-content .tab-pane {
     padding: 35px;
-    background-color: rgba(67, 25, 161, 0.65);
+    background-color: rgba(129, 40, 91, 0.65);
 }
 
 .hero-search-form .tab-content .tab-pane h6 {
