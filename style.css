@@ -586,7 +586,7 @@ outline: 0px solid #000000;
 
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-item.active .nav-link {
-    color: #7643ea;
+    color: rgba(0, 85, 132,1);
 }
 
 .dorne-search-btn > a,
@@ -625,7 +625,7 @@ outline: 0px solid #000000;
 }
 
 .dropdown-item:hover {
-    background-color: #7643ea;
+    background-color: rgba(0, 85, 132,1);
     color: #fff;
 }
 
@@ -894,7 +894,7 @@ outline: 0px solid #000000;
     position: absolute;
     top: 20px;
     left: 20px;
-    background-color: #7643ea;
+    background-color: rgba(0, 85, 132,1);
     height: 35px;
     font-size: 12px;
     line-height: 35px;
@@ -914,8 +914,8 @@ outline: 0px solid #000000;
     font-weight: 800;
     text-transform: uppercase;
     margin-bottom: 0;
-    -webkit-transition-duration: 500ms;
-            transition-duration: 500ms;
+   -webkit-transition-duration: 500ms;
+           transition-duration: 500ms;
 }
 
 .feature-content .feature-title p {
@@ -931,7 +931,7 @@ outline: 0px solid #000000;
 }
 
 .single-features-area:hover {
-    background-color: #7643ea;
+    background-color: rgba(0, 85, 132,1);
     box-shadow: 3px 15px 30px rgba(0, 0, 0, 0.15);
 }
 
@@ -982,7 +982,7 @@ outline: 0px solid #000000;
 .single-feature-events-area {
     position: relative;
     z-index: 1;
-    background-color: #fff;
+    background-color: rgb(197, 211, 255);
     margin-bottom: 50px;
     -webkit-transition-duration: 500ms;
             transition-duration: 500ms;
@@ -1007,7 +1007,7 @@ outline: 0px solid #000000;
     font-weight: 800;
     color: #fff;
     height: 50px;
-    background-color: #7643ea;
+    background-color: rgba(0, 85, 132,1);
     text-align: center;
 }
 
@@ -1066,7 +1066,7 @@ outline: 0px solid #000000;
 .feature-events-content h6 {
     font-size: 14px;
     font-weight: 400;
-    color: #bfb1de;
+    color: rgb(120, 120, 120);
     margin-bottom: 15px;
     -webkit-transition-duration: 500ms;
             transition-duration: 500ms;
@@ -1080,7 +1080,7 @@ outline: 0px solid #000000;
 }
 
 .single-feature-events-area:hover {
-    background-color: #7643ea;
+    background-color: rgba(0, 85, 132,1);
 }
 
 .single-feature-events-area:hover .feature-events-content h5,
