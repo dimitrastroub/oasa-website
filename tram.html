@@ -192,7 +192,7 @@
 						<div class="tab-content" id="nav-tabContent">
                             <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab" style="text-align:center">
                                 <h6>Γραμμή 3 "Θουκυδίδης" <br> Στάδιο Ειρήνης και Φιλίας - Ασκληπιείο Βούλας</h6>
-                                    <img id="myImg" src="img/tram-xartis.png"  style="width:200px;height:200px; align:right;">
+                                    <img id="myImg" src="img/tram-grammi3.png"  style="width:200px;height:200px; align:right;">
 									<ul style="list-style-type:disc; color: white; text-align: center;">
                                     &nbsp;
 									  <li>Στάδιο Ειρήνης και Φιλίας – σύνδεση με τη γραμμή 1 του μετρό (Η.Σ.Α.Π.)</li>
@@ -234,7 +234,9 @@
 							</div>
 							<div class="tab-pane fade" id="nav-events" role="tabpanel" aria-labelledby="nav-events-tab" style="text-align:center">
                                 <h6>Γραμμή 4 "Αριστοτέλης" <br> Σύνταγμα - Στάδιο Ειρήνης και Φιλίας </h6>
+									<img id="myImg1" src="img/tram-grammi4.png"  style="width:200px;height:200px; align:right;">
 									<ul style="list-style-type:disc; color: white; text-align: center;">
+										&nbsp;
 										<li>Σύνταγμα – σύνδεση με τις γραμμές 2 και 3 του μετρό</li>
 										<li>Ζάππειο</li>
 										<li>Λεωφόρος Βουλιαγμένης</li>
@@ -268,7 +270,9 @@
 							</div>
 							<div class="tab-pane fade" id="nav-places2" role="tabpanel" aria-labelledby="nav-places2-tab" style="text-align:center">
                                 <h6>Γραμμή 5 "Πλάτωνας" <br> Σύνταγμα - Ασκληπιείο Βούλας </h6>
+									<img id="myImg2" src="img/tram-grammi5.png"  style="width:200px;height:200px; align:right;">
 									<ul style="list-style-type:disc; color: white; text-align: center;">
+										&nbsp;
 										<li>Σύνταγμα – σύνδεση με τις γραμμές 2 και 3 του μετρό</li>
 										<li>Ζάππειο</li>
 										<li>Λεωφόρος Βουλιαγμένης</li>
@@ -334,6 +338,24 @@
 		var modalImg = document.getElementById("img01");
 		var captionText = document.getElementById("caption");
 		img.onclick = function(){
+		  modal.style.display = "block";
+		  modalImg.src = this.src;
+		  captionText.innerHTML = this.alt;
+		}
+		
+		var img1 = document.getElementById("myImg1");
+		var modalImg = document.getElementById("img01");
+		var captionText = document.getElementById("caption");
+		img1.onclick = function(){
+		  modal.style.display = "block";
+		  modalImg.src = this.src;
+		  captionText.innerHTML = this.alt;
+		}
+		
+		var img2 = document.getElementById("myImg2");
+		var modalImg = document.getElementById("img01");
+		var captionText = document.getElementById("caption");
+		img2.onclick = function(){
 		  modal.style.display = "block";
 		  modalImg.src = this.src;
 		  captionText.innerHTML = this.alt;
