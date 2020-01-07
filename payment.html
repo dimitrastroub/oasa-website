@@ -178,14 +178,14 @@
                             <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab">
 								
 								<a style="color:white; font-size: 20px; padding-right:150px"> Όνομα*:</a>
-								<input type="text" name="e-mail" style="color:rgb(128,128,128); font-size:12px; padding-right:177px" placeholder="ΓΙΑΝΝΗΣ" style="width: 40%">
+								<input type="text" id="name" name="e-mail" style="color:rgb(128,128,128); font-size:12px; padding-right:177px" value="" placeholder="ΓΙΑΝΝΗΣ" style="width: 40%" >
 								<br>
 								<a style="color:white; font-size: 20px; padding-right:125px"> Επώνυμο*:</a>
-								<input type="text" name="e-mail" style="color:rgb(128,128,128); font-size:12px; padding-right:177px" placeholder="ΠΑΠΑΔΟΠΟΥΛΟΣ" style="width: 40%">
+								<input type="text" id="Name" name="e-mail" style="color:rgb(128,128,128); font-size:12px; padding-right:177px" value="" placeholder="ΠΑΠΑΔΟΠΟΥΛΟΣ" style="width: 40%">
 								<br>
 								<a style="color:white; font-size: 20px; padding-right:155px"> Κάρτα*:</a>
 								<img src="img/card.png" style="width:5em; height:1.5em;">
-								<select>
+								<select id="card_type">
 								<img src="img/background.png" style="width:35em; height:40em;">
 								<option value="1" >VISA</option>
 								<option value="2" >Master Card</option>
@@ -195,15 +195,15 @@
 								<br>
 								
 								<a style="color:white; font-size: 20px; padding-right:60px"> Αριθμός Κάρτας*:</a>
-								<input type="text" name="e-mail" style="color:rgb(128,128,128); font-size:12px; padding-right:177px" placeholder="1111 2222 3333 4444" style="width: 40%">
+								<input type="text" id="card" name="e-mail" style="color:rgb(128,128,128); font-size:12px; padding-right:177px" value="" placeholder="1111 2222 3333 4444" style="width: 40%" >
 								<br>
 								<a style="color:white; font-size: 20px; padding-right:177px"> CVV*:</a> 
-								<input type="text" name="cvv" style="color:rgb(128,128,128); font-size:12px; padding-right:177px" placeholder="352" style="width: 40%">
+								<input type="text" id="CVV" name="cvv" style="color:rgb(128,128,128); font-size:12px; padding-right:177px" value="" placeholder="352" style="width: 40%" >
 								<br>
 								<a style="color:white; font-size: 12px; padding-right:177px">*4 τελευταία ψηφία για American Express:</a> 
 								<br>
 								<a style="color:white; font-size: 20px; padding-right:34px"> Ημερομηνία Λήξης*:</a>
-								<input type="month" name="expmonth" style="width: 40%">
+								<input type="month" id="date" name="expmonth" min="2020-01" max="2050-01" value="" style="width: 40%" >
 								
 								<br>
 								<a style="color:white; font-size: 20px; padding-right:167px"> E-Mail:</a>
@@ -216,23 +216,96 @@
 								<a style="color:white; font-size: 20px;"</a>
 								<input type="radio" name="gender" value="1" checked > Επιθυμώ να μου σταλεί η απόδειξη στο e-mail<br>
 								<input type="radio" name="gender" value="2" >Εμφάνιση απόδειξης <br>
-								<input type="submit" value="Ολοκλήρωση αγοράς" style="width: 30%">
+								<input type="button" onclick="myFunction()" value="Ολοκλήρωση αγοράς" style="width: 30%">
+								<p id="demo1" style="color:white" >  </p>
+								
 							</div>
 	</section>
-		<!--
-		First name:<br>
-		<input type="text" name="firstname" value="Mickey">
-		<br>
-		Last name:<br>
-		<input type="text" name="lastname" value="Mouse">
-		<br><br>
-		<input type="submit" value="Submit">-->
+		
 	
 	<div id="dropDownSelect1"></div>
 	
 	<script src="js/main.js"></script>
 	
+	<script>
 	
+	function myFunction() {
+	
+		var i,j,text="";
+		var y=document.getElementById("card_type");
+		var x=document.getElementById("CVV");
+		
+		
+		if(document.getElementById("name").value==""){
+			text=text + "! Συμπληρώστε σωστά το Όνομα " + "<br/>";
+		
+		}
+		if(document.getElementById("Name").value==""){
+			text=text + "! Συμπληρώστε σωστά το Επίθετο " + "<br/>";
+			
+		}
+		
+		if(document.getElementById("card").value.length !=19) {
+			text= text+ "! Συμπληρώστε σωστά τον Αριθμό Κάρτας. Η σωστή μορφή: 1111 2222 3333 4444" + "<br/>";
+		}
+		else{
+			
+			for (i = 0; i < document.getElementById("card").value.length; i++){
+			
+				if(i==4 || i==9 || i==14){
+					if(document.getElementById("card").value.charCodeAt(i) != 32){
+						text= text+ "! Συμπληρώστε σωστά τον Αριθμό Κάρτας. Η σωστή μορφή: 1111 2222 3333 4444" + "<br/>";
+						break;
+					}			
+					
+				}
+				else{
+					if(document.getElementById("card").value.charCodeAt(i)<48 || document.getElementById("card").value.charCodeAt(i)>57){
+						text= text+ "! Συμπληρώστε σωστά τον Αριθμό Κάρτας. Η σωστή μορφή: 1111 2222 3333 4444" + "<br/>";
+						break;
+					}
+				}
+			}
+		}
+		
+		if( x.value.length!=3  && x.value.length != 4 ) {
+			text=text + "! Συμπληρώστε σωστά τον αριθμό CVV. 3 ψηφία ή 4 για MasterCard " + "<br/>";
+		}
+		else if(x.value.length==4 && y.value != 3){
+			text=text + "! Συμπληρώστε σωστά τον αριθμό CVV. 3 ψηφία ή 4 για MasterCard " + "<br/>";
+		}
+		else if(x.value.length==3 && y.value==3){
+			text=text + "! Συμπληρώστε σωστά τον αριθμό CVV. 3 ψηφία ή 4 για MasterCard " + "<br/>";
+		}
+		else{
+			for(j=0 ;j<x.value.length; j++){
+				if(x.value.charCodeAt(j)<48 || x.value.charCodeAt(j)>57){
+					text=text + "! Συμπληρώστε σωστά τον αριθμό CVV. 3 ψηφία ή 4 για MasterCard " + "<br/>";
+
+				}
+			}
+		}
+		
+		
+		if(document.getElementById("date").value==""){
+			text=text + "! Συμπληρώστε σωστά την Ημερομηνία Λήξης ";
+			document.getElementById("demo1").innerHTML = text;
+			return;
+		}
+			
+		
+		if(i==19 ){
+			document.getElementById("demo1").innerHTML = "aa";
+			window.alert("Ολοκλήρωση πληρωμής με επιτυχία!\n Επιστροφή στην αρχική σελίδα");
+			document.location="index.html";
+		}
+		else{
+			document.getElementById("demo1").innerHTML = text;
+		}
+		
+		
+	}
+	</script>
 	
 	<!-- jQuery-2.2.4 js -->
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
