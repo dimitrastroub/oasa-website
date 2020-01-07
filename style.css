@@ -503,6 +503,18 @@ button[type=submit]{
   
 }
 
+button1[type=submit]{
+  background-color: rgba(0,0,172,0.6);
+  border:none;
+  color: #FFFFFF;
+  padding: 1=4px 6px;
+  cursor: pointer;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  
+}
+
 form{
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
@@ -690,7 +702,7 @@ outline: 0px solid #000000;
 .dorne-add-listings-btn > a {
     color: #fff;
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 15px;
     font-size: 15px;
 }
 

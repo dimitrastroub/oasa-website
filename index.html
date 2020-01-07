@@ -136,8 +136,217 @@
                             </div>
                             <!-- Signin btn -->
                             <div class="dorne-signin-btn">
-                                <a href="login.html">Είσοδος/Εγγραφή</a>
+                                <a onclick="document.getElementById('id01').style.display='block'" style="font-style:normal; color:white; font-weight:600;">Είσοδος/Εγγραφή</a>
+                             </div>
+						<style>
+						body {font-family: 'Open sans', sans-serif;}
+
+						/* Full-width input fields */
+						#input1{
+						  width: 100%;
+                          height: 50px;
+						  padding: 12px 20px;
+						  margin: 8px 0;
+						  display: inline-block;
+						  border: 1px solid #ccc;
+						  box-sizing: border-box;
+						}
+                        
+                         #input2 {
+						  width: 100%;
+                          height: 50px;
+						  padding: 12px 20px;
+						  margin: 8px 0;
+						  display: inline-block;
+						  border: 1px solid #ccc;
+						  box-sizing: border-box;
+						}
+
+						/* Set a style for all buttons */
+
+						#signup-button{
+						  background-color: rgb(0,0,172);
+						  color: white;
+						  padding: 14px 10px;
+						  margin: 8px 0;
+						  border: none;
+						  cursor: pointer;
+						  width: 100%;
+						}
+
+						button:hover {
+						  opacity: 0.8;
+						}
+
+						/* Extra styles for the cancel button */
+						.cancelbtn {
+						  width: auto;
+						  padding: 10px 18px;
+						  background-color: #f44336;
+                          font-weight:400; 
+                          font-size:20px;
+						}
+
+						/* Center the image and position the close button */
+						.imgcontainer {
+						  text-align: center;
+						  margin: 24px 0 12px 0;
+						  position: relative;
+						}
+						.container {
+						  padding: 16px;
+						}
+                        
+
+						span.psw {
+						  float: right;
+						  padding-top: 16px;
+                          font-weight:400; 
+                          font-size:20px;
+						}
+
+						/* The Modal (background) */
+						.modal {
+						  display: none; /* Hidden by default */
+						  position: fixed; /* Stay in place */
+						  z-index: 1; /* Sit on top */
+						  left: 0;
+						  top: 0;
+						  width: 100%; /* Full width */
+						  height: 100%; /* Full height */
+						  overflow: auto; /* Enable scroll if needed */
+						  background-color: rgb(0,0,0); /* Fallback color */
+						  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+						  padding-top: 60px;
+						}
+
+						/* Modal Content/Box */
+						.modal-content {
+						  background-color: #fefefe;
+                         
+						  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+						  border: 1px solid #888;
+						  width: 500px; /* Could be more or less, depending on screen size */
+						}
+
+						/* Add Zoom Animation */
+						.animate {
+						  -webkit-animation: animatezoom 0.6s;
+						  animation: animatezoom 0.6s
+						}
+
+						@-webkit-keyframes animatezoom {
+						  from {-webkit-transform: scale(0)} 
+						  to {-webkit-transform: scale(1)}
+						}
+						  
+						@keyframes animatezoom {
+						  from {transform: scale(0)} 
+						  to {transform: scale(1)}
+						}
+
+						/* Change styles for span and cancel button on extra small screens */
+						@media screen and (max-width: 300px) {
+						  span.psw {
+							 display: block;
+							 float: none;
+						  }
+						  .cancelbtn {
+							 width: 100%;
+						  }
+						}
+						</style>
+                        <!--login-->
+								<div id="id01" class="modal">
+								  
+								  <form class="modal-content animate">
+									<div class="imgcontainer">
+									  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+									  
+									</div>
+                                    <i style="font-weight:400; font-style:normal; font-size:20px; padding-left:18px;">Δεν είσαι μέλος;<a onclick="document.getElementById('id02').style.display='block'"><i style="color:lightblue; font-style:normal; font-size:20px;"> Εγγραφή</i></a></i>
+									<div class="container">
+                                      
+									  <label for="uname" style="font-weight:400; font-size:20px;"><b>E-mail</b></label>
+									  <input id='input1' type="text" name="uname" required>
+
+									  <label for="psw" style="font-weight:400; font-size:20px;"><b>Κωδικός</b></label>
+									  <input id='input2' type="password" name="psw" required>
+										
+									  <button id='signup-button' type="submit" style="font-weight:400; font-size:20px;">Σύνδεση</button>
+									  <br>
+                                        
+										<input type="checkbox" name="remember"><i style="font-weight:400; font-style:normal; font-size:20px;"> Θυμήσου με!</i>
+                                        
+									
+									</div>
+
+									<div class="container" style="background-color:#f1f1f1">
+                                      
+									  <button id='cancelbtn' type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Ακύρωση</button>
+                                     
+									  <span class="psw" >Ξέχασες τον <a href="#">κωδικό</a> σου;</span>
+									</div>
+								  </form>
+								</div>
                             </div>
+                            
+                            <!--signup-->
+                            <div id="id02" class="modal">
+								  
+								  <form class="modal-content animate">
+									<div class="imgcontainer">
+									  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+									  
+									</div>
+                                    
+									<div class="container">
+                                      
+									  <label for="uname" style="font-weight:400; font-size:20px;"><b>E-mail</b></label>
+									  <input id='input1' type="text" style ="font-style: italic; color: rgb(169,169,169)" value="name@example.com" name="uname" required>
+
+									  <label for="psw" style="font-weight:400; font-size:20px;"><b>Κωδικός</b></label>
+									  <label for="psw" style="font-weight:300; font-size:13px; font-style: italic";><b>(τουλάχιστον 8 χαρακτήρες , τουλάχιστον 1 αριθμός)</b></label>
+									  <input id='input2' type="password" style ="font-style: italic; color: rgb(169,169,169)" value="pasgtyhtsword" name="psw" required>
+										
+									  <label for="psw" style="font-weight:400; font-size:20px;"><b>Επαλήθευση κωδικού</b></label>
+									   <input id='input2' type="password" style ="font-style: italic; color: rgb(169,169,169)" value="pasgtyhtsword" name="psw" required>
+									  
+									  <button id='signup-button' type="submit" value="" Sstyle="font-weight:400; font-size:20px;">Σύνδεση</button>
+									  <br>
+                                        
+										<input type="checkbox" name="remember"><i style="font-weight:400; font-style:normal; font-size:20px;"> Θυμήσου με!</i>
+									</div>
+
+									<div class="container" style="background-color:#f1f1f1">
+                                      
+									  <button id='cancelbtn' type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Ακύρωση</button>
+                                    
+									</div>
+								  </form>
+								</div>
+                       <script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+var modal = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+                            
+                           
                             <!-- Add listings btn -->
                             <div class="dorne-add-listings-btn">
                                 <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i>Αγαπημένα</a>
