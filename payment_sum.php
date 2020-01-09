@@ -31,7 +31,7 @@
 		$sql = $db->query("SELECT SUM(Timh*Number)  AS value_sum FROM payment WHERE Number>0");
 		$row = $sql->fetch_assoc();
 		echo number_format((float)$row['value_sum'], 2, '.', '');
-		
+
 		header("Location: payment.php"); 
 	}
 	

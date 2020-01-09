@@ -1,7 +1,8 @@
-<?php include ('ser.php'); ?>
+
 <!DOCTYPE html>
 <html lang="el">
 
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="">
@@ -182,20 +183,27 @@
                         <div class="nav nav-tabs" id="heroTab" role="tablist">
                         </div>
                         <!-- Tabs Content -->
-    <!--                    <div class="tab-content1" id="nav-tabContent">
+                       <div class="tab-content1" id="nav-tabContent">
                             <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab">
-                                <h2><i class="fa fa-map-marker" aria-hidden="true"> </i>Στάσεις με προεξοχές στο Δήμο Καισαριανής</h2> 
-								<label style="color: white;"> 11η ΚΑΙΣΑΡΙΑΝΗΣ	ΕΘΝΙΚΗΣ ΑΝΤΙΣΤΑΣΕΩΣ	ΚΑΙΣΑΡΙΑΝΗΣ </label><br>
-								<label style="color: white;" >11η ΚΑΙΣΑΡΙΑΝΗΣ	ΕΘΝΙΚΗΣ ΑΝΤΙΣΤΑΣΕΩΣ	ΚΑΙΣΑΡΙΑΝΗΣ </label><br>
-								<label style="color: white;" >8η ΚΑΙΣΑΡΙΑΝΗΣ	ΕΘΝΙΚΗΣ ΑΝΤΙΣΤΑΣΕΩΣ	ΚΑΙΣΑΡΙΑΝΗΣ </label><br>
-								<label style="color: white;" >9η ΚΑΙΣΑΡΙΑΝΗΣ	ΕΘΝΙΚΗΣ ΑΝΤΙΣΤΑΣΕΩΣ	ΚΑΙΣΑΡΙΑΝΗΣ</label><br>
-								<label style="color: white;" >ΔΗΜΑΡΧΕΙΟ	    ΕΘΝΙΚΗΣ ΑΝΤΙΣΤΑΣΕΩΣ	ΚΑΙΣΑΡΙΑΝΗΣ </label><br>
-								<label style="color: white;" >ΠΑΝΑΓΙΤΣΑ	    ΕΘΝΙΚΗΣ ΑΝΤΙΣΤΑΣΕΩΣ	ΚΑΙΣΑΡΙΑΝΗΣ </label><br>
-								<label style="color: white;" >ΠΑΝΑΓΙΤΣΑ	    ΕΘΝΙΚΗΣ ΑΝΤΙΣΤΑΣΕΩΣ	ΚΑΙΣΑΡΙΑΝΗΣ </label><br>
-								<label style="color: white;" >ΦΑΡΜΑΚΕΙΟ	    ΕΘΝΙΚΗΣ ΑΝΤΙΣΤΑΣΕΩΣ	ΚΑΙΣΑΡΙΑΝΗΣ </label><br>
-								<label style="color: white;"> ΦΑΡΜΑΚΕΙΟ	    ΕΘΝΙΚΗΣ ΑΝΤΙΣΤΑΣΕΩΣ	ΚΑΙΣΑΡΙΑΝΗΣ </label>
+                                <h2><i class="fa fa-map-marker" aria-hidden="true"> </i> <i style =" font-style:normal;" >Στάση &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </i> <i  style =" font-style:normal;" >Οδός &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </i> <i  style =" font-style:normal;" >Δήμος &nbsp &nbsp &nbsp &nbsp &nbsp </i> <br><br>
+								<?php
+								$db=mysqli_connect('localhost','root','','atoma');
+								$sql= "SELECT * FROM papagos";
+								$result = $db->query($sql);
+								while($row = $result->fetch_assoc()) {
+									if ($row["id"] == 2){ ?>
+									<pre style = "font-size: 20px; color: white;"><?php echo  $row["stash"]; echo "\t\t\t"; echo $row["odos"]; echo "\t\t\t"; echo $row["dhmos"]. "<br>";?></pre>
+									<?php }
+									else {
+									?> 
+
+									<pre style = "font-size: 20px; color: white;"><?php echo  $row["stash"]; echo "\t\t"; echo $row["odos"]; echo "\t\t"; echo $row["dhmos"]. "<br>";?></pre>
+									<?php 
+										}
+									}
+								?>
                             </div>
-                        </div> -->
+                        </div>
                         </div>
                     </div>
                 </div>
