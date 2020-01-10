@@ -18,6 +18,20 @@
  
    <link href="css/responsive/responsive.css" rel="stylesheet">
    </head>
+   
+   <style>
+   .error{
+		width: 92%;
+		margin: 0px auto;
+		padding: 10px;
+		border: 1px solid gray;
+		color: gray;
+		background: red;
+		border-radius: 5px;
+		text-align: left;
+		display: block;
+}
+   </style>
 <body>
   
     
@@ -29,9 +43,10 @@
                     <div class="search-close-btn" id="closeBtn">
                         <i class="pe-7s-close-circle" aria-hidden="true"></i>
                     </div>
-                    <form action="#" method="get">
-                        <input type="search" name="caviarSearch" id="search" placeholder="Search Your Desire Destinations or Events">
-                        <input type="submit" class="d-none" value="submit">
+                    <form  autocomplete="off" style="width:300px;" action="#" method="get" >
+					<a id="search-btn" href="#"><i class="fa fa-search" aria-hidden="true" style="color: white;" > Αναζήτηση</i></a>
+							<input type="input" name="myCountry" id="myInput" placeholder="Αναζήτηση.." onchange="location = this.value + '.php';">
+							<input type="submit" class="d-none" value="submit">
                     </form>
                 </div>
             </div>
@@ -58,8 +73,8 @@
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Μετρό <i class="fa fa-angle-down" aria-hidden="true"></i></a>
 											<div class="dropdown-menu" x-placement="right-start" style="position: absolute; transform: translate3d(230px, 0px, 0px); top: 4px; left: 0px; will-change: transform;" >
-                                            	<a class="dropdown-item" href="Στάσεις.html">Στάσεις</a>
-												<a class="dropdown-item" href="Ωράριο.html">Ωράριο</a>
+                                            	<a class="dropdown-item" href="Μετρό-Στάσεις.php">Στάσεις</a>
+												<a class="dropdown-item" href="Μετρό-Ωράριο.php">Ωράριο</a>
 											</div>
 										</a>
                                         <a class="dropdown-item" href="#">Τραμ</a>
@@ -74,7 +89,7 @@
 									<div class="nav-item active">
 										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Εισιτήρια <i class="fa fa-angle-down" aria-hidden="true"></i></a>
 										<div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-											<a class="dropdown-item" href="agora.php">Ηλεκτρονική Αγορά/Επαναφόρτιση</a>
+											<a class="dropdown-item" href="Αγορά-Επαναφόρτιση.php">Ηλεκτρονική Αγορά/Επαναφόρτιση</a>
 											<a class="dropdown-item" href="explore.html">Δικαιολογητικά Έκδοσης AthenaCard</a>
 											<a class="dropdown-item" href="listing.html">Τιμές Εισιτηρίων</a>
 											<a class="dropdown-item" href="single-listing.html">Σημεία Έκδοσης/Επαναφόρτισης και Εισιτηρίων</a>
@@ -139,7 +154,7 @@
                         </div>
                     </nav>
 					
-					<nav class="h-30 navbar navbar-expand-lg">
+					<nav class="h-30 navbar navbar-expand-lg" style="margin-bottom: 20px">
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dorneNav" aria-controls="dorneNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
                         <!-- Nav -->
                         <div class="collapse navbar-collapse" id="dorneNav"  >
@@ -148,7 +163,7 @@
 									<a class="nav-link" href="index.html"> > </a>
 									<a class="nav-link" href="index.html" style=" font-weight: bold; font-size:18px;">Εισητήρια</a>
 									<a class="nav-link" href="index.html"> ></a>
-									<a class="nav-link" href="agora.php" style="font-weight: bold; font-size:18px;">Ηλεκτρονική Αγορά/Επαναφόρτιση</a>
+									<a class="nav-link" href="Αγορά-Επαναφόρτιση.php" style="font-weight: bold; font-size:18px;">Ηλεκτρονική Αγορά/Επαναφόρτιση</a>
 									<a class="nav-link" href="index.html"> ></a>
 									<a class="nav-link" href="agora.html"><span style="color:rgba(0, 85, 132,1); font-weight: bold; font-size:18px;">Πληρωμή</span></a>
                     </nav>
@@ -160,12 +175,7 @@
 
     <!-- ***** Header Area End ***** -->
 	
-	<?php
-					/*			$db=mysqli_connect('localhost','root','','test');
-								$sql = $db->query("SELECT SUM(Timh*Number)  AS value_sum FROM payment WHERE Number>0");
-								$row = $sql->fetch_assoc();
-								echo number_format((float)$row['value_sum'], 2, '.', '');*/
-							?>
+	
 	
     
 
@@ -176,7 +186,7 @@
             <div class="row h-100 align-items-center justify-content-center">
                 <div class="col-12 col-md-10">
                     <!-- Hero Search Form -->
-                    <div class="hero-search-form">
+                    <div class="hero-search-form" >
                         <!-- Tabs -->
                         <div class="nav nav-tabs" id="heroTab" role="tablist">
 						
@@ -191,20 +201,14 @@
                             <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab">
 								
 								
-	<!--							<form action="payment.php" method="get">
-		Name: <input type="text" name="name"><br>
-		<input type="submit">
-		<button name="plhrwmh_sum" type="submit"  >Εμφάνιση συνολικού πληρωμής</button>
-					
-					</form>
-		-->
+	
 						<h3 style="color:white">Το Συνολικό ποσό πληρωμής είναι:
 								<?php	 $db=mysqli_connect('localhost','root','','test');
 							$sql = $db->query("SELECT SUM(Timh*Number)  AS value_sum FROM payment WHERE Number>0");
 							$row = $sql->fetch_assoc();
 							echo number_format((float)$row['value_sum'], 2, '.', '');
 							mysqli_close($db);
-					?> <br> <br>
+					?> € <br> <br>
 					</h3>
 								<a style="color:white; font-size: 20px; padding-right:150px"> Όνομα*:</a>
 								<input type="text" id="name" name="e-mail" style="color:rgb(128,128,128); font-size:12px; padding-right:177px" value="" placeholder="ΓΙΑΝΝΗΣ" style="width: 40%" >
@@ -232,7 +236,7 @@
 								<a style="color:white; font-size: 12px; padding-right:177px">*4 τελευταία ψηφία για American Express:</a> 
 								<br>
 								<a style="color:white; font-size: 20px; padding-right:34px"> Ημερομηνία Λήξης*:</a>
-								<input type="month" id="date" name="expmonth" min="2020-01" max="2050-01" value="" style="width: 40%" >
+								<input type="month" id="date" name="expmonth" min="2020-01" max="2050-01" value="" style="width: 40.5%" >
 								
 								<br>
 								<a style="color:white; font-size: 20px; padding-right:167px"> E-Mail:</a>
@@ -240,12 +244,14 @@
 								<br>
 								<a style="color:white; font-size: 20px; padding-right:27px"> Αριθμός Τηλεφώνου:</a>
 								<input type="text" name="number" value="+30"style="width: 10%">
-								<input type="text" name="number" value=""style="width: 29.5%">
+								<input type="text" name="number" value=""style="width: 30.3%">
 								<br><br>
 								<a style="color:white; font-size: 20px;"</a>
-								<input type="radio" name="gender" value="1" checked > Επιθυμώ να μου σταλεί η απόδειξη στο e-mail<br>
-								<input type="radio" name="gender" value="2" >Εμφάνιση απόδειξης <br>
-								<input type="button" onclick="myFunction()" value="Ολοκλήρωση αγοράς" style="width: 30%">
+								<input type="radio" name="gender" id="op1" value="1" > Επιθυμώ να μου σταλεί η απόδειξη στο e-mail<br>
+								<input type="radio" name="gender" id="op2" value="2" > Εμφάνιση απόδειξης <br>
+								
+								<input type="button"  onclick="myFunction()" value="Ολοκλήρωση αγοράς" style="width: 30%">
+								
 								<p id="demo1" style="color:white" >  </p>
 								
 							</div>
@@ -256,10 +262,20 @@
 	
 	<script src="js/main.js"></script>
 	
-	<script>
+	
+		<script>
 	
 	
 	function myFunction() {
+		
+		document.getElementById("demo1").style.backgroundColor="rgba(252, 29, 29,0.45)";
+		document.getElementById("demo1").style.width="70%";
+		document.getElementById("demo1").style.fontWeight= "bold";
+		document.getElementById("demo1").style.fontFamily= "Open sans,sans-serif";
+		document.getElementById("demo1").style.fontSize="14px";
+		document.getElementById("demo1").style.borderRadius="25px";
+		document.getElementById("demo1").style.paddingLeft="15px";
+		document.getElementById("demo1").style.marginTop="10px";
 	
 		var i,j,text="";
 		var y=document.getElementById("card_type");
@@ -325,8 +341,14 @@
 			
 		
 		if(i==19 ){
-			document.getElementById("demo1").innerHTML = "aa";
-			window.alert("Ολοκλήρωση πληρωμής με επιτυχία!\n Επιστροφή στην αρχική σελίδα");
+			if (document.getElementById('op1').checked) {
+				document.getElementById("demo1").innerHTML = "option1 was checked";
+				
+			}else if(document.getElementById('op2').checked) {
+				document.getElementById("demo1").innerHTML = "option2 was checked";
+				window.open("receipt.php");
+			}
+		//	window.alert("Ολοκλήρωση πληρωμής με επιτυχία!\n Επιστροφή στην αρχική σελίδα");
 			document.location="index.html";
 		}
 		else{
@@ -335,7 +357,106 @@
 		
 		
 	}
+	
+	function autocomplete(inp, arr) {
+  
+  var currentFocus;
+  
+  inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+      
+      closeAllLists();
+      if (!val) { return false;}
+      currentFocus = -1;
+     
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+      
+      this.parentNode.appendChild(a);
+      
+      for (i = 0; i < arr.length; i++) {
+        
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+          
+          b = document.createElement("DIV");
+          
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+          
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+          
+          b.addEventListener("click", function(e) {
+              
+              inp.value = this.getElementsByTagName("input")[0].value;
+              
+              closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+  });
+  
+  inp.addEventListener("keydown", function(e) {
+      var x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        
+        currentFocus++;
+       
+        addActive(x);
+      } else if (e.keyCode == 38) { //up
+        
+        currentFocus--;
+        
+        addActive(x);
+      } else if (e.keyCode == 13) {
+        
+        e.preventDefault();
+        if (currentFocus > -1) {
+         
+          if (x) x[currentFocus].click();
+        }
+      }
+  });
+  function addActive(x) {
+   
+    if (!x) return false;
+    
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (x.length - 1);
+    
+    x[currentFocus].classList.add("autocomplete-active");
+  }
+  function removeActive(x) {
+   
+    for (var i = 0; i < x.length; i++) {
+      x[i].classList.remove("autocomplete-active");
+    }
+  }
+  function closeAllLists(elmnt) {
+   
+    var x = document.getElementsByClassName("autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+  }
+  
+  document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+  });
+}
+
+var countries = ["Μετρό-Ωράριο","Τραμ", "ΜΜΜ","ΑΜΕΑ-ΣτάσειςΜεΠροεξοχές-Καισαριανή","Μετρό-Στάσεις","Αγορά/Επαναφόρτιση", "Τιμές-Εισιτηρίων"];
+
+
+autocomplete(document.getElementById("myInput"), countries);
+	
 	</script>
+	
 	
 	<!-- jQuery-2.2.4 js -->
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
