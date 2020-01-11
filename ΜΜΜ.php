@@ -37,9 +37,9 @@
                         <i class="pe-7s-close-circle" aria-hidden="true"></i>
                     </div>
                     <form  autocomplete="off" style="width:300px;" action="#" method="get" >
-					<a id="search-btn" href="#"><i class="fa fa-search" aria-hidden="true" style="color: white;" > Αναζήτηση</i></a>
-							<input type="input" name="myCountry" id="myInput" placeholder="Αναζήτηση.." onchange="location = this.value + '.php';">
-							<input type="submit" class="d-none" value="submit">
+						<a id="search-btn" href="#"><i class="fa fa-search" aria-hidden="true" style="color: white;" > Αναζήτηση</i></a>
+						<input type="input" name="myCountry" id="myInput" placeholder="Αναζήτηση.." onchange="location = this.value + '.php';">
+						<input type="submit" class="d-none" value="submit">
                     </form>
                 </div>
             </div>
@@ -69,8 +69,8 @@
                                         <a class="dropdown-item" <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Μετρό <i class="fa fa-angle-down" aria-hidden="true"></i></a>
 											<div class="dropdown-menu" x-placement="right-start" style="position: absolute; transform: translate3d(230px, 0px, 0px); top: 4px; left: 0px; will-change: transform;" >
                                             	
-												<a class="dropdown-item" href="Στάσεις.html">Στάσεις</a>
-												<a class="dropdown-item" href="Ωράριο.html">Ωράριο</a>
+												<a class="dropdown-item" href="Μετρό-Στάσεις.php">Στάσεις</a>
+												<a class="dropdown-item" href="Μετρό-Ωράριο.php">Ωράριο</a>
 											</div>
 										</a>
                                         <a class="dropdown-item" href="#">Τραμ</a>
@@ -87,7 +87,7 @@
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
                                         <a class="dropdown-item" href="agora.php">Ηλεκτρονική Αγορά/Επαναφόρτιση</a>
                                         <a class="dropdown-item" href="explore.html">Δικαιολογητικά Έκδοσης AthenaCard</a>
-                                        <a class="dropdown-item" href="listing.html">Τιμές Εισιτηρίων</a>
+                                        <a class="dropdown-item" href="Τιμές-Εισιτηρίων.php">Τιμές Εισιτηρίων</a>
                                         <a class="dropdown-item" href="single-listing.html">Σημεία Έκδοσης/Επαναφόρτισης και Εισιτηρίων</a>
                                     </div>
                                 </li>
@@ -372,7 +372,7 @@
   });
 }
 
-var countries = ["Μετρό-Ωράριο","Τραμ", "ΜΜΜ","ΑΜΕΑ-ΣτάσειςΜεΠροεξοχές-Καισαριανή","Μετρό-Στάσεις","Αγορά/Επαναφόρτιση", "Τιμές-Εισιτηρίων"];
+var countries = ["Μετρό-Ωράριο","Τραμ", "ΜΜΜ","ΑΜΕΑ-ΣτάσειςΜεΠροεξοχές-Καισαριανή","Μετρό-Στάσεις","Αγορά-Επαναφόρτιση", "Τιμές-Εισιτηρίων"];
 
 
 autocomplete(document.getElementById("myInput"), countries);
