@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="el">
+
+
+<style>
+	table, th, td {
+	border: 1px solid white;
+	color:white;
+	text-align: center;
+	}
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Τιμές εισιτηρίων</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/favicon.ico">
+
+    <!-- Core Stylesheet -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- Responsive CSS -->
+    <link href="css/responsive/responsive.css" rel="stylesheet">
+
+</head>
+
+<body>
+   <!-- <!-- Preloader -->
+    <div id="preloader">
+        <div class="dorne-load"></div>
+    </div>
+
+    <!-- ***** Search Form Area ***** -->
+    <div class="dorne-search-form d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="search-close-btn" id="closeBtn">
+                        <i class="pe-7s-close-circle" aria-hidden="true"></i>
+                    </div>
+                    <form  autocomplete="off" style="width:300px;" action="#" method="get" >
+						<a id="search-btn" href="#"><i class="fa fa-search" aria-hidden="true" style="color: white;" > Αναζήτηση</i></a>
+						<input type="input" name="myCountry" id="myInput" placeholder="Αναζήτηση.." onchange="location = this.value + '.php';">
+						<input type="submit" class="d-none" value="submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header_area" id="header">
+       <div class="container-fluid h-100">
+            <div class="row h-100">
+                <div class="col-12 h-100">
+                    <nav class="h-100 navbar navbar-expand-lg">
+                        <a class="navbar-brand" href="index.html"><img src="img/logo.png" style="width:4em; height:4em;"></a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dorneNav" aria-controls="dorneNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
+                        <!-- Nav -->
+                        <div class="collapse navbar-collapse" id="dorneNav">
+                            <ul class="navbar-nav mr-auto" id="dorneMenu">
+                                
+                                <a class="nav-link" href="index.html">Αρχική <span class="sr-only">(current)</span></a>
+                              
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Δρομολόγια <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Μετρό <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+											<div class="dropdown-menu" x-placement="right-start" style="position: absolute; transform: translate3d(230px, 0px, 0px); top: 4px; left: 0px; will-change: transform;" >
+                                            	<a class="dropdown-item" href="Μετρό-Στάσεις.php">Στάσεις</a>
+												<a class="dropdown-item" href="Μετρό-Ωράριο.php">Ωράριο</a>
+											</div>
+										</a>
+                                        <a class="dropdown-item" href="#">Τραμ</a>
+                                        <a class="dropdown-item" href="#">Ηλεκτρικός Σιδηρόδρομος</a>
+                                        <a class="dropdown-item" href="#">Προαστιακός</a>
+                                        <a class="dropdown-item" href="#">Τρόλεϊ</a>
+										<a class="dropdown-item" href="#">Λεωφορεία</a>
+                                        
+                                    </div>
+                                </li>
+								
+								<li class="nav-item dropdown">
+									<div class="nav-item active">
+										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Εισιτήρια <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+										<div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+											<a class="dropdown-item" href="Αγορά-Επαναφόρτιση.php">Ηλεκτρονική Αγορά/Επαναφόρτιση</a>
+											<a class="dropdown-item" href="explore.html">Δικαιολογητικά Έκδοσης AthenaCard</a>
+											<a class="dropdown-item" href="Τιμές-Εισιτηρίων.php">Τιμές Εισιτηρίων</a>
+											<a class="dropdown-item" href="single-listing.html">Σημεία Έκδοσης/Επαναφόρτισης και Εισιτηρίων</a>
+										</div>
+									</div
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ΑΜΕΑ <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                                        <a class="dropdown-item" href="index.html">Ανελκυστήρες</a>
+                                        <a class="dropdown-item" <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Στάσεις με Προεξοχές <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+											<div class="dropdown-menu" x-placement="right-start" style="position: absolute; transform: translate3d(230px, 30px, 0px); top: 4px; left: 35px; will-change: transform;" >
+                                                <form action="#" method="get">
+												<select  class="sel" size=10 onchange="window.location = this.value;" >
+													<option value="#" >Δήμος Αγίας Βαρβάρας</option>
+													<option value="2">Δήμος Αγίου Δημήτριου</option>
+													<option value="3">Δήμος Αθηνών</option>
+													<option value="4">Δήμος Ελληνικού-Αργυρούπολης</option>
+													<option value="5">Δήμος Αχαρνών</option>
+													<option value="6">Δήμος Βύρωνα</option>
+													<option value="7">Δήμος Γλυφάδας</option>
+													<option value="8">Δήμος Δάφνης-Υμηττού</option>
+													<option value="9">Δήμος Ζωγράφου</option>
+													<option value="10">Δήμος Ηλιούπολης</option>
+													<option value="kaisariani.html">Δήμος Καισαριανής</option>
+													<option value="12">Δήμος Καλλιθέας</option>
+													<option value="13">Δήμος Μελλισίων</option>
+													<option value="14">Δήμος Νέας Σμύρνης</option>
+													<option value="15">Δήμος Νέας Χαλκηδόνας-Νέας Φιλαδέφλιας</option>
+													<option value="16">Δήμος Νίκαιας</option>
+													<option value="17">Δήμος Παπάγου-Χολαργού</option>
+													<option value="18">Δήμος Δήμος Παλαιού Φαλήρου</option>
+													<option value="19">Δήμος Πειραιά</option>
+													<option value="20">Δήμος Περάματος</option>
+													<option value="21">Δήμος Περιστερίου</option>
+													<option value="22">Δήμος Πετρούπολης</option>
+												</select>
+												</form>
+												
+											</div>
+                                        <a class="dropdown-item" href="listing.html">Οδηγίες Προσέγγισης στα ΜΜΜ</a>
+                                        <a class="dropdown-item" href="single-listing.html">Ανακοινώσεις</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.html">Ανακοινώσεις</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.html">Οργανισμός</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="contact.html">Βοήθεια&Επικοινωνία</a>
+                                </li>
+                            </ul>
+                            <!-- Search btn -->
+                            <div class="dorne-search-btn">
+                                <a id="search-btn" href="#"><i class="fa fa-search" aria-hidden="true"></i>Αναζήτηση</a>
+                            </div>
+                            <!-- Signin btn -->
+                            <div class="dorne-signin-btn">
+                                <a href="login.html">Είσοδος/Εγγραφή</a>
+                            </div>
+                            <!-- Add listings btn -->
+                            <div class="dorne-add-listings-btn">
+                                <a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i>Αγαπημένα</a>
+                            </div>
+                        </div>
+                    </nav>
+					
+					<nav class="h-30 navbar navbar-expand-lg">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dorneNav" aria-controls="dorneNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
+                        <!-- Nav -->
+                        <div class="collapse navbar-collapse" id="dorneNav">
+                            <ul class="navbar-nav mr-auto" id="dorneMenu">
+                                    <a class="nav-link" href="index.html" style="font-weight: bold; font-size:18px; ">Αρχική </a>
+									<a class="nav-link" href="index.html"> > </a>
+									<a class="nav-link" href="" style="font-weight: bold; font-size:18px; ">Εισητήρια </a>
+									<a class="nav-link" href=""> > </a>
+									<a class="nav-link" href="Τιμές-Εισιτηρίων.php"><span style="color:rgba(0, 85, 132,1); font-weight: bold; font-size:18px; ">Τιμές εισητηρίων</span></a>
+						</div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <section class="dorne-editors-pick-area bg-img bg-overlay-9 section-padding-100" style="background-image: url(img/buy_ticket.jpg);">
+  
+		<br><br>
+	
+        <div class="container h-100">
+            <div class="row h-100 align-items-center justify-content-center">
+                <div class="col-12 col-md-10">
+                   
+                    <div class="hero-search-form" >
+                        <!-- Tabs -->
+						<form method="post" action="Αγορά-Επαναφόρτιση.php" style="font-size:15px; " >
+                        <div class="nav nav-tabs" id="heroTab" role="tablist" >
+						
+                            <a class="nav-item nav-link active" id="nav-places-tab" data-toggle="tab" href="#nav-places" role="tab" aria-controls="nav-places" aria-selected="true" style="width: 50%">Αγορα</a>
+                            <a class="nav-item nav-link" id="nav-events-tab" data-toggle="tab" href="#nav-events" role="tab" aria-controls="nav-events" aria-selected="false" style="width: 50%">Επαναφορτιση</a>
+                        </div>
+                       
+                        <div class="tab-content" id="nav-tabContent" style="margin-top: 0px" >
+							
+                            <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab" >
+                                <h6>Εισιτήρια μικρής διάρκειας (χωρίς μετακινήσεις προς Αεροδρόμιο)</h6>
+								
+										 <table style="width:80%">
+											  <tr>
+												<th></th>
+												<th>Πολλαπλό εισιτήριο (Ολόκληρο)</th>
+												<th>Πολλαπλό εισιτήριο (Μειωμένο)</th>
+											  </tr>
+											  <tr>
+												<td>Ένα εισιτήριο 90 λεπτών</td>
+												<td>1.40 €</td>
+												<td>Χ</td>
+											  </tr>
+											  <tr>
+												<td>Δύο εισιτήρια 90 λεπτών</td>
+												<td>2.70 €</td>
+												<td>Χ</td>
+											  </tr>
+											  <tr>
+												<td>Πέντε εισιτήρια 90 λεπτών</td>
+												<td>6.50 €</td>
+												<td>Χ</td>
+											  </tr>
+											  <tr>
+												<td>Έντεκα εισιτήρια 90 λεπτών(1 δωρεάν)</td>
+												<td>13.50 €</td>
+												<td>Χ</td>
+											  </tr>
+											  <tr>
+												<td>Εισιτήριο 24 ωρών</td>
+												<td>4,5 €</td>
+												<td>Χ</td>
+											  </tr>
+											  <tr>
+												<td>Εισιτήριο 5 ημερών</td>
+												<td>9 €</td>
+												<td>Χ</td>
+											  </tr>
+										</table> 
+                               
+							   <br><br><br>
+								<h6>Εισιτήρια μικρής διάρκειας (με μετακινήσεις προς Αεροδρόμιο)</h6>
+								
+								<table style="width:80%" color=#fff  >
+											  <tr>
+												<th></th>
+												<th>Πολλαπλό εισιτήριο (Ολόκληρο)</th>
+												<th>Πολλαπλό εισιτήριο (Μειωμένο)</th>
+											  </tr>
+											  <tr>
+												<td>Εισιτήριο Λεωφορείου Express για Αεροδρόμιο</td>
+												<td>6 €</td>
+												<td>Χ</td>
+											  </tr>
+											  <tr>
+												<td>Εισιτήριο Μετρό για Αεροδρόμιο</td>
+												<td>10 €</td>
+												<td>Χ</td>
+											  </tr>
+											  <tr>
+												<td>Εισιτήριο Μετρό μετ επιστροφής για Αεροδρόμιο (εντός 48 ωρών)</td>
+												<td>18 €</td>
+												<td>Χ</td>
+											  </tr>
+											  <tr>
+												<td>Εισιτήριο Μετρό μεταξύ Αεροδρομίου & Παλλήνη-Κάντζα-Κορωπί</td>
+												<td>6 €</td>
+												<td>Χ</td>
+											  </tr>
+											  <tr>
+												<td>Τουριστικό εισιτήριο 3 ημερών (περιλαμβάνει μετακινήσεις προς Αεροδρόμιο)</td>
+												<td>22 €</td>
+												<td>Χ</td>
+											  </tr>
+										</table> 
+										
+										
+										
+										<br>
+										
+										
+									<!--	<button type="button" onclick="myFunction()">Submit</button>-->
+										<input type="button" onclick="myFunction()" value="Εμφάνιση του έως τώρα συνολικού ποσού πληρωμής" />
+										<p id="demo" style="color:white" >  </p>
+									<!--	<input type="button" name="plhrwmh"  value="Μεταφορά στη διαδικασία πληρωμής" />
+										onclick="location.href='payment.html';"-->
+										<button name="plhrwmh" type="submit"  >Μεταφορά στη διαδικασία πληρωμής</button>
+										
+										
+							
+							
+							
+
+                            </div>
+                            <div class="tab-pane fade" id="nav-events" role="tabpanel" aria-labelledby="nav-events-tab">
+                                <h6>Εισιτήρια μικρής διάρκειας (χωρίς μετακινήσεις προς Αεροδρόμιο)</h6>
+                                <table style="width:80%" color=#fff  >
+											  <tr>
+												<th></th>
+												<th>Ανώνυμη κάρτα (Ολόκληρο)</th>
+												<th>Ανώνυμη κάρτα (Μειωμένο)</th>
+												<th>Προσωποποιημένη κάρτα (Ολόκληρο)</th>
+												<th>Προσωποποιημένη κάρτα (Μειωμένο)</th>
+											  </tr>
+											  <tr>
+												<td>Ένα εισιτήριο 90 λεπτών</td>
+												<td>1.40 €</td>
+												<td>Χ</td>
+												<td>1.40 €</td>
+												<td>0.60 €</td>
+											  </tr>
+											  <tr>
+												<td>Δύο εισιτήρια 90 λεπτών</td>
+												<td>2.70 €</td>
+												<td>Χ</td>
+												<td>2.70 €</td>
+												<td>1.20 €</td>
+											  </tr>
+											  <tr>
+												<td>Πέντε εισιτήρια 90 λεπτών</td>
+												<td>6.50 €</td>
+												<td>Χ</td>
+												<td>6.50 €</td>
+												<td>3.00 €</td>
+											  </tr>
+											  <tr>
+												<td>Έντεκα εισιτήρια 90 λεπτών(1 δωρεάν)</td>
+												<td>13.50 €</td>
+												<td>Χ</td>
+												<td>13.50 €</td>
+												<td>6.00 €</td>
+											  </tr>
+											  <tr>
+												<td>Εισιτήριο 24 ωρών</td>
+												<td>4,5 €</td>
+												<td>Χ</td>
+												<td>4,5 €</td>
+												<td>Χ </td>
+												<th></th>
+
+											  </tr>
+											  <tr>
+												<td>Εισιτήριο 5 ημερών</td>
+												<td>9 €</td>
+												<td>Χ</td>
+												<td>9 €</td>
+												<td>Χ</td>
+												<th></th>
+
+											  </tr>
+										</table> 
+										
+										<br><br><br>
+										<h6>Εισιτήρια μικρής διάρκειας (με μετακινήσεις προς Αεροδρόμιο)</h6>
+										
+										<table style="width:80%" color=#fff  >
+											<tr>
+												<th></th>
+												<th>Ανώνυμη κάρτα (Ολόκληρο)</th>
+												<th>Ανώνυμη κάρτα (Μειωμένο)</th>
+												<th>Προσωποποιημένη κάρτα (Ολόκληρο)</th>
+												<th>Προσωποποιημένη κάρτα (Μειωμένο)</th>
+											 </tr>
+											  
+											<tr>
+												<td>Εισιτήριο Λεωφορείου Express για Αεροδρόμιο</td>
+												<td>6 €</td>
+												<td>Χ</td>
+												<td>6 €</td>
+												<td>3 €</td>
+											</tr>
+											<tr>
+												<td>Εισιτήριο Μετρό για Αεροδρόμιο</td>
+												<td>10 €</td>
+												<td>Χ</td>
+												<td>10 €</td>
+												<td>5 €</td>
+											</tr>
+											<tr>
+												<td>Εισιτήριο Μετρό μετ επιστροφής για Αεροδρόμιο (εντός 48 ωρών)</td>
+												<td>18 €</td>
+												<td>Χ</td>
+												<td>18 €</td>
+												<td>Χ</td>
+												<th></th>
+											</tr>
+											<tr>
+												<td>Εισιτήριο Μετρό μεταξύ Αεροδρομίου & Παλλήνη-Κάντζα-Κορωπί</td>
+												<td>6 €</td>
+												<td>Χ</td>
+												<td>6 €</td>
+												<td>3 €</td>
+											</tr>
+											<tr>
+												<td>Τουριστικό εισιτήριο 3 ημερών (περιλαμβάνει μετακινήσεις προς Αεροδρόμιο)</td>
+												<td>22 €</td>
+												<td>Χ</td>
+												<td>22 €</td>
+												<td>Χ</td>
+												<th></th>
+											</tr>
+										</table> 
+										
+										<br><br><br>
+										<h6>Εισιτήρια μεγάλης διάρκειας</h6>
+										
+										<table style="width:80%" color=#fff  >
+											<tr>
+												<th></th>
+												<th>Ανώνυμη κάρτα (Ολόκληρο)</th>
+												<th>Ανώνυμη κάρτα (Μειωμένο)</th>
+												<th>Προσωποποιημένη κάρτα (Ολόκληρο)</th>
+												<th>Προσωποποιημένη κάρτα (Μειωμένο)</th>
+											</tr>
+											<tr>
+												<td>Εισιτήριο 30 ημερών (χωρίς μετακινήσεις προς Αεροδρόμιο)</td>
+												<td>Χ</td>
+												<td>Χ</td>
+												<td>30 €</td>
+												<td>15 €</td>
+											</tr>
+											<tr>
+												<td>Εισιτήριο 30 ημερών (με μετακινήσεις προς Αεροδρόμιο)</td>
+												<td>Χ</td>
+												<td>Χ</td>
+												<td>49 €</td>
+												<td>25 €</td>
+											</tr>
+											<tr>
+												<td>Εισιτήριο 90 ημερών (χωρίς μετακινήσεις προς Αεροδρόμιο)</td>
+												<td>Χ</td>
+												<td>Χ</td>
+												<td>85 €</td>
+												<td>43 €</td>
+											</tr>
+											<tr>
+												<td>Εισιτήριο 90 ημερών (με μετακινήσεις προς Αεροδρόμιο)</td>
+												<td>Χ</td>
+												<td>Χ</td>
+												<td>142 €</td>
+												<td>71 €</td>
+											</tr>
+											<tr>
+												<td>Εισιτήριο 180 ημερών (χωρίς μετακινήσεις προς Αεροδρόμιο)</td>
+												<td>Χ</td>
+												<td>Χ</td>
+												<td>170 €</td>
+												<td>85 €</td>
+											</tr>
+											<tr>
+												<td>Εισιτήριο 180 ημερών (με μετακινήσεις προς Αεροδρόμιο)</td>
+												<td>Χ</td>
+												<td>Χ</td>
+												<td>250 €</td>
+												<td>125 €</td>
+											</tr>
+											<tr>
+												<td>Εισιτήριο 365 ημερών (χωρίς μετακινήσεις προς Αεροδρόμιο)</td>
+												<td>Χ</td>
+												<td>Χ</td>
+												<td>330 €</td>
+												<td>165 €</td>
+											</tr>
+											<tr>
+												<td>Εισιτήριο 365 ημερών (με μετακινήσεις προς Αεροδρόμιο)</td>
+												<td>Χ</td>
+												<td>Χ</td>
+												<td>490 €</td>
+												<td>245 €</td>
+											</tr>
+										</table> 	
+										
+										<br>
+										<input type="button" onclick="myFunction()" value="Εμφάνιση του έως τώρα συνολικού ποσού πληρωμής" />
+										<p id="demo1" style="color:white" >  </p>
+									<!--	<input type="button" name="plhrwmh" onclick="location.href='payment.html';" value="Μεταφορά στη διαδικασία πληρωμής" />-->
+										<button name="plhrwmh" type="submit" onclick="location.href='payment.php';" >Μεταφορά στη διαδικασία πληρωμής</button>
+									
+                            </div>
+							
+                        </div>
+						</form>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</section>
+	
+	<script>
+	
+	function autocomplete(inp, arr) {
+  
+  var currentFocus;
+  
+  inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+      
+      closeAllLists();
+      if (!val) { return false;}
+      currentFocus = -1;
+     
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+      
+      this.parentNode.appendChild(a);
+      
+      for (i = 0; i < arr.length; i++) {
+        
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+          
+          b = document.createElement("DIV");
+          
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+          
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+          
+          b.addEventListener("click", function(e) {
+              
+              inp.value = this.getElementsByTagName("input")[0].value;
+              
+              closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+  });
+  
+  inp.addEventListener("keydown", function(e) {
+      var x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        
+        currentFocus++;
+       
+        addActive(x);
+      } else if (e.keyCode == 38) { //up
+        
+        currentFocus--;
+        
+        addActive(x);
+      } else if (e.keyCode == 13) {
+        
+        e.preventDefault();
+        if (currentFocus > -1) {
+         
+          if (x) x[currentFocus].click();
+        }
+      }
+  });
+  function addActive(x) {
+   
+    if (!x) return false;
+    
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (x.length - 1);
+    
+    x[currentFocus].classList.add("autocomplete-active");
+  }
+  function removeActive(x) {
+   
+    for (var i = 0; i < x.length; i++) {
+      x[i].classList.remove("autocomplete-active");
+    }
+  }
+  function closeAllLists(elmnt) {
+   
+    var x = document.getElementsByClassName("autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+  }
+  
+  document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+  });
+}
+
+var countries = ["Μετρό-Ωράριο","Τραμ", "ΜΜΜ","ΑΜΕΑ-ΣτάσειςΜεΠροεξοχές-Καισαριανή","Μετρό-Στάσεις","Αγορά-Επαναφόρτιση", "Τιμές-Εισιτηρίων"];
+
+
+autocomplete(document.getElementById("myInput"), countries);
+
+</script>
+	
+    <!-- jQuery-2.2.4 js -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap-4 js -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="js/others/plugins.js"></script>
+    <!-- Active JS -->
+    <script src="js/active.js"></script>
+</body>
+
+</html>
