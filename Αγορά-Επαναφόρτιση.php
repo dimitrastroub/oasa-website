@@ -101,7 +101,7 @@
 										<div class="dropdown-menu" aria-labelledby="navbarDropdown2">
 											<a class="dropdown-item" href="Αγορά-Επαναφόρτιση.php">Ηλεκτρονική Αγορά/Επαναφόρτιση</a>
 											<a class="dropdown-item" href="explore.html">Δικαιολογητικά Έκδοσης AthenaCard</a>
-											<a class="dropdown-item" href="listing.html">Τιμές Εισιτηρίων</a>
+											<a class="dropdown-item" href="Τιμές-Εισιτηρίων.php">Τιμές Εισιτηρίων</a>
 											<a class="dropdown-item" href="single-listing.html">Σημεία Έκδοσης/Επαναφόρτισης και Εισιτηρίων</a>
 										</div>
 									</div>
@@ -200,7 +200,7 @@
                     <!-- Hero Search Form -->
                     <div class="hero-search-form" >
                         <!-- Tabs -->
-						<form method="post" action="agora.php" style="font-size:15px; " >
+						<form method="post" action="Αγορά-Επαναφόρτιση.php" style="font-size:15px; " >
                         <div class="nav nav-tabs" id="heroTab" role="tablist" >
 						
                             <a class="nav-item nav-link active" id="nav-places-tab" data-toggle="tab" href="#nav-places" role="tab" aria-controls="nav-places" aria-selected="true" style="width: 50%">Αγορα</a>
@@ -558,7 +558,7 @@
 										<input type="button" onclick="myFunction()" value="Εμφάνιση του έως τώρα συνολικού ποσού πληρωμής" />
 										<p id="demo1" style="color:white" >  </p>
 									<!--	<input type="button" name="plhrwmh" onclick="location.href='payment.html';" value="Μεταφορά στη διαδικασία πληρωμής" />-->
-										<button name="plhrwmh" type="submit" onclick="location.href='payment.html';" >Μεταφορά στη διαδικασία πληρωμής</button>
+										<button name="plhrwmh" type="submit" onclick="location.href='payment.php';" >Μεταφορά στη διαδικασία πληρωμής</button>
 									
                             </div>
 							
