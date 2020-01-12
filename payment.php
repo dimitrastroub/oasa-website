@@ -349,7 +349,7 @@
 				window.open("receipt.php");
 			}
 		//	window.alert("Ολοκλήρωση πληρωμής με επιτυχία!\n Επιστροφή στην αρχική σελίδα");
-			document.location="index.html";
+			document.location="Βέλτιστη-Διαδρομή.php";
 		}
 		else{
 			document.getElementById("demo1").innerHTML = text;
