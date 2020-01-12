@@ -6,13 +6,7 @@
 	
 	if(isset($_POST['plhrwmh'])){
 		
-	/*	$sql = "SELECT Id, Eidos, Timh,Number FROM payment";
-		$result = $db->query($sql);
-		while($row = $result->fetch_assoc()) {
-			echo "Id: " . $row["Id"]. " - Eidos: " . $row["Eidos"]. " -Timh: " . $row["Timh"]. " -Number:" . $row["Number"]. "<br>";
-		}
-		
-*/
+	
 		$sql = "SELECT Id, Eidos, Timh,Number FROM payment";
 		$result = $db->query($sql);
 	
@@ -31,7 +25,7 @@
 		$sql = $db->query("SELECT SUM(Timh*Number)  AS value_sum FROM payment WHERE Number>0");
 		$row = $sql->fetch_assoc();
 		echo number_format((float)$row['value_sum'], 2, '.', '');
-
+		
 		header("Location: payment.php"); 
 	}
 	
