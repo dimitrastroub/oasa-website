@@ -61,13 +61,13 @@
             <div class="row h-100">
                 <div class="col-12 h-100">
                     <nav class="h-100 navbar navbar-expand-lg">
-                        <a class="navbar-brand" href="index.html"><img src="img/logo.png" style="width:4em; height:4em;"></a>
+                        <a class="navbar-brand" href="Βέλτιστη-Διαδρομή.php"><img src="img/logo.png" style="width:4em; height:4em;"></a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dorneNav" aria-controls="dorneNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
                         <!-- Nav -->
                         <div class="collapse navbar-collapse" id="dorneNav">
                             <ul class="navbar-nav mr-auto" id="dorneMenu">
                                 
-                                <a class="nav-link" href="index.html">Αρχική <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="Βέλτιστη-Διαδρομή.php">Αρχική <span class="sr-only">(current)</span></a>
                               
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Δρομολόγια <i class="fa fa-angle-down" aria-hidden="true"></i></a>
@@ -92,16 +92,16 @@
 										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Εισιτήρια <i class="fa fa-angle-down" aria-hidden="true"></i></a>
 										<div class="dropdown-menu" aria-labelledby="navbarDropdown2">
 											<a class="dropdown-item" href="Αγορά-Επαναφόρτιση.php">Ηλεκτρονική Αγορά/Επαναφόρτιση</a>
-											<a class="dropdown-item" href="explore.html">Δικαιολογητικά Έκδοσης AthenaCard</a>
+											<a class="dropdown-item" href="#">Δικαιολογητικά Έκδοσης AthenaCard</a>
 											<a class="dropdown-item" href="Τιμές-Εισιτηρίων.php">Τιμές Εισιτηρίων</a>
-											<a class="dropdown-item" href="single-listing.html">Σημεία Έκδοσης/Επαναφόρτισης και Εισιτηρίων</a>
+											<a class="dropdown-item" href="#">Σημεία Έκδοσης/Επαναφόρτισης και Εισιτηρίων</a>
 										</div>
 									</div
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ΑΜΕΑ <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                                        <a class="dropdown-item" href="index.html">Ανελκυστήρες</a>
+                                        <a class="dropdown-item" href="#">Ανελκυστήρες</a>
                                         <a class="dropdown-item" <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Στάσεις με Προεξοχές <i class="fa fa-angle-down" aria-hidden="true"></i></a>
 											<div class="dropdown-menu" x-placement="right-start" style="position: absolute; transform: translate3d(230px, 30px, 0px); top: 4px; left: 35px; will-change: transform;" >
                                                 <form action="#" method="get">
@@ -132,18 +132,18 @@
 												</form>
 												
 											</div>
-                                        <a class="dropdown-item" href="listing.html">Οδηγίες Προσέγγισης στα ΜΜΜ</a>
-                                        <a class="dropdown-item" href="single-listing.html">Ανακοινώσεις</a>
+                                        <a class="dropdown-item" href="#">Οδηγίες Προσέγγισης στα ΜΜΜ</a>
+                                        <a class="dropdown-item" href="#">Ανακοινώσεις</a>
                                     </div>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Ανακοινώσεις</a>
+                                    <a class="nav-link" href="#">Ανακοινώσεις</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Οργανισμός</a>
+                                    <a class="nav-link" href="#">Οργανισμός</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Βοήθεια&Επικοινωνία</a>
+                                    <a class="nav-link" href="#">Βοήθεια&Επικοινωνία</a>
                                 </li>
                             </ul>
                             <!-- Search btn -->
@@ -166,8 +166,8 @@
                         <!-- Nav -->
                         <div class="collapse navbar-collapse" id="dorneNav">
                             <ul class="navbar-nav mr-auto" id="dorneMenu">
-                                    <a class="nav-link" href="index.html" style="font-weight: bold; font-size:18px; ">Αρχική </a>
-									<a class="nav-link" href="index.html"> > </a>
+                                    <a class="nav-link" href="Βέλτιστη-Διαδρομή.php" style="font-weight: bold; font-size:18px; ">Αρχική </a>
+									<a class="nav-link" href=""> > </a>
 									<a class="nav-link" href="" style="font-weight: bold; font-size:18px; ">Εισητήρια </a>
 									<a class="nav-link" href=""> > </a>
 									<a class="nav-link" href="Τιμές-Εισιτηρίων.php"><span style="color:rgba(0, 85, 132,1); font-weight: bold; font-size:18px; ">Τιμές εισητηρίων</span></a>
