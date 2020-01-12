@@ -1,7 +1,6 @@
 <?php
     session_start();
-    
-    $db=mysqli_connect('localhost','root','','dimitra');
+   
 	echo "\n";	
 	
 	if(isset($_POST['anazhthsh'])){
@@ -40,11 +39,5 @@
 			}
 		}
 	}
-	
-	
-	
-	
-	
-	mysqli_close($db);
 		
 ?>
