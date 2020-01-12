@@ -11,7 +11,7 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>Στάσεις</title>
+    <title>Στάσεις με Προεξοχές</title>
 
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.ico">
@@ -38,102 +38,100 @@
                     <div class="search-close-btn" id="closeBtn">
                         <i class="pe-7s-close-circle" aria-hidden="true"></i>
                     </div>
-                    <form action="#" method="get">
-                        <input type="search" name="caviarSearch" id="search" placeholder="Search Your Desire Destinations or Events">
-                        <input type="submit" class="d-none" value="submit">
+                    <form  autocomplete="off" style="width:450px;" action="#" method="get" >
+						<a id="search-btn" href="#"><i class="fa fa-search" aria-hidden="true" style="color: white;" > Αναζήτηση</i></a>
+							<input type="input" name="myCountry" id="myInput" placeholder="Αναζήτηση.." onchange="location = this.value + '.php';">
+							<input type="submit" class="d-none" value="submit">
                     </form>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- ***** Header Area Start ***** -->
     <header class="header_area" id="header">
        <div class="container-fluid h-100">
             <div class="row h-100">
                 <div class="col-12 h-100">
-				
-				                    <nav class="h-100 navbar navbar-expand-lg">
-                        <a class="navbar-brand" href="index.html"><img src="img/logo.png" style="width:4em; height:4em;"></a>
+                    <nav class="h-100 navbar navbar-expand-lg">
+                        <a class="navbar-brand" href="Βέλτιστη-Διαδρομή.php"><img src="img/logo.png" style="width:4em; height:4em;"></a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dorneNav" aria-controls="dorneNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
                         <!-- Nav -->
                         <div class="collapse navbar-collapse" id="dorneNav">
                             <ul class="navbar-nav mr-auto" id="dorneMenu">
-                                    <a class="nav-link" href="index.html">Αρχική <span class="sr-only">(current)</span></a>
-                              
+                                
+                                    <a class="nav-link" href="Βέλτιστη-Διαδρομή.php">Αρχική <span class="sr-only">(current)</span></a>
+                               
                                 <div class="nav-item dropdown">
 									<li class="nav-item active">
 										<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Δρομολόγια <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                    
-									<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-									
-                                        <a class="dropdown-item" <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Μετρό <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-<div class="dropdown-menu" x-placement="right-start" style="position: absolute; transform: translate3d(230px, 0px, 0px); top: 4px; left: 0px; will-change: transform;" >
-                                            	
-												<a class="dropdown-item" href="Στάσεις.html">Στάσεις</a>
-												<a class="dropdown-item" href="Ωράριο.html">Ωράριο</a>
-											</div>
-										</a>
-                                        <a class="dropdown-item" href="#">Τραμ</a>
-                                        <a class="dropdown-item" href="#">Ηλεκτρικός Σιδηρόδρομος</a>
-                                        <a class="dropdown-item" href="#">Προαστιακός</a>
-                                        <a class="dropdown-item" href="#">Τρόλεϊ</a>
-										<a class="dropdown-item" href="#">Λεωφορεία</a>
+										<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+											<a class="dropdown-item" <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Μετρό <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+												<div class="dropdown-menu" x-placement="right-start" style="position: absolute; transform: translate3d(230px, 0px, 0px); top: 4px; left: 0px; will-change: transform;" >
+													<a class="dropdown-item" href="Μετρό-Στάσεις.php">Στάσεις</a>
+													<a class="dropdown-item" href="Μετρό-Ωράριο.php">Ωράριο</a>
+												</div>
+											</a>
+											<a class="dropdown-item" href="#">Τραμ</a>
+											<a class="dropdown-item" href="#">Ηλεκτρικός Σιδηρόδρομος</a>
+											<a class="dropdown-item" href="#">Προαστιακός</a>
+											<a class="dropdown-item" href="#">Τρόλεϊ</a>
+											<a class="dropdown-item" href="#">Λεωφορεία</a>
                                         
-                                    </div>
-									</div>
-                                </li>
+										</div>
+									</li>
+								</div>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Εισιτήρια <i class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                                        <a class="dropdown-item" href="agora.html">Ηλεκτρονική Αγορά/Επαναφόρτιση</a>
-                                        <a class="dropdown-item" href="explore.html">Δικαιολογητικά Έκδοσης AthenaCard</a>
-                                        <a class="dropdown-item" href="listing.html">Τιμές Εισιτηρίων</a>
-                                        <a class="dropdown-item" href="single-listing.html">Σημεία Έκδοσης/Επαναφόρτισης και Εισιτηρίων</a>
-                                    </div>
-                                </li>
+									
+									<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Εισιτήρια <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+									<div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+										<a class="dropdown-item" href="Αγορά-Επαναφόρτιση.php">Ηλεκτρονική Αγορά/Επαναφόρτιση</a>
+										<a class="dropdown-item" href="#">Δικαιολογητικά Έκδοσης AthenaCard</a>
+										<a class="dropdown-item" href="Τιμές-Εισιτηρίων.php">Τιμές Εισιτηρίων</a>
+										<a class="dropdown-item" href="#">Σημεία Έκδοσης/Επαναφόρτισης και Εισιτηρίων</a>
+									</div>
+								</li>
+								
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ΑΜΕΑ <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-									<a class="dropdown-item" href="amea.html">Πληροφορίες για ΑΜΕΑ</a>	
-                                        <a class="dropdown-item" href="index.html">Ανελκυστήρες</a>
-										<a class="dropdown-item" <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Στάσεις με Προεξοχές <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+										<a class="dropdown-item" href="amea.php">Πληροφορίες για ΑΜΕΑ</a>	
+                                        <a class="dropdown-item" href="#">Ανελκυστήρες</a>										<a class="dropdown-item" <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Στάσεις με Προεξοχές <i class="fa fa-angle-down" aria-hidden="true"></i></a>
 											<div class="dropdown-menu" x-placement="right-start" style="position: absolute; transform: translate3d(230px, 30px, 0px); top: 4px; left: 35px; will-change: transform;" >
-                                                <a class="dropdown-item" href="hlioupolh.php">Δήμος Αγίας Βαρβάρας</a>
-												<a class="dropdown-item" href="hlioupolh.php">Δήμος Αγίου Δημήτριου</a>
-												<a class="dropdown-item" href="hlioupolh.php">Δήμος Αθηνών</a>
-												<a class="dropdown-item" href="hlioupolh.php">Δήμος Ελληνικού-Αργυρούπολης</a>
-												<a class="dropdown-item" href="hlioupolh.php">Δήμος Αχαρνών</a>
-												<a class="dropdown-item" href="hlioupolh.php">Δήμος Βύρωνα</a>
-												<a class="dropdown-item" href="hlioupolh.php">Δήμος Γλυφάδας</a>
-												<a class="dropdown-item" href="hlioupolh.php">Δήμος Δάφνης-Υμηττού</a>
-												<a class="dropdown-item" href="hlioupolh.php">Δήμος Ζωγράφου</a>
+                                                <a class="dropdown-item" href="#">Δήμος Αγίας Βαρβάρας</a>
+												<a class="dropdown-item" href="#">Δήμος Αγίου Δημήτριου</a>
+												<a class="dropdown-item" href="#">Δήμος Αθηνών</a>
+												<a class="dropdown-item" href="#">Δήμος Ελληνικού-Αργυρούπολης</a>
+												<a class="dropdown-item" href="#">Δήμος Αχαρνών</a>
+												<a class="dropdown-item" href="#">Δήμος Βύρωνα</a>
+												<a class="dropdown-item" href="#">Δήμος Γλυφάδας</a>
+												<a class="dropdown-item" href="#">Δήμος Δάφνης-Υμηττού</a>
+												<a class="dropdown-item" href="#">Δήμος Ζωγράφου</a>
 												<a class="dropdown-item" href="ΑΜΕΑ-ΣτάσειςΜεΠροεξοχές-Ηλιούπολη.php">Δήμος Ηλιούπολης</a>
 												<a class="dropdown-item" href="ΑΜΕΑ-ΣτάσειςΜεΠροεξοχές-Καισαριανή.php">Δήμος Καισαριανής</a>
-												<a class="dropdown-item" href="hlioupolh.php">Δήμος Καλλιθέας</a>
-												<a class="dropdown-item" href="hlioupolh.php">Δήμος Μελλισίων</a>
-												<a class="dropdown-item" href="hlioupolh.php">Δήμος Νέας Σμύρνης</a>
-												<a class="dropdown-item" href="hlioupolh.php">Δήμος Νέας Χαλκηδόνας-Νέας Φιλαδέφλιας</a>
-												<a class="dropdown-item" href="hlioupolh.php">Δήμος Νίκαιας</a>
+												<a class="dropdown-item" href="#">Δήμος Καλλιθέας</a>
+												<a class="dropdown-item" href="#">Δήμος Μελλισίων</a>
+												<a class="dropdown-item" href="#">Δήμος Νέας Σμύρνης</a>
+												<a class="dropdown-item" href="#">Δήμος Νέας Χαλκηδόνας-Νέας Φιλαδέφλιας</a>
+												<a class="dropdown-item" href="#">Δήμος Νίκαιας</a>
 												<a class="dropdown-item" href="ΑΜΕΑ-ΣτάσειςΜεΠροεξοχές-Παπάγος.php">Δήμος Παπάγου-Χολαργού</a>
-												<a class="dropdown-item" href="hlioupolh.php">Δήμος Παλαιού Φαλήρου</a>
-												<a class="dropdown-item" href="hlioupolh.php">Δήμος Πειραιά</a>
-												<a class="dropdown-item" href="hlioupolh.php">Δήμος Περάματος</a>
-												<a class="dropdown-item" href="hlioupolh.php">Δήμος Περιστερίου</a>
-												<a class="dropdown-item" href="hlioupolh.php">Δήμος Πετρούπολης</a>
+												<a class="dropdown-item" href="#">Δήμος Παλαιού Φαλήρου</a>
+												<a class="dropdown-item" href="#">Δήμος Πειραιά</a>
+												<a class="dropdown-item" href="#">Δήμος Περάματος</a>
+												<a class="dropdown-item" href="#">Δήμος Περιστερίου</a>
+												<a class="dropdown-item" href="#">Δήμος Πετρούπολης</a>
 											</div>
-                                        <a class="dropdown-item" href="listing.html">Οδηγίες Προσέγγισης στα ΜΜΜ</a>
-                                        <a class="dropdown-item" href="single-listing.html">Ανακοινώσεις</a>
+                                        <a class="dropdown-item" href="#">Οδηγίες Προσέγγισης στα ΜΜΜ</a>
+                                        <a class="dropdown-item" href="#">Ανακοινώσεις</a>
                                     </div>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Ανακοινώσεις</a>
+                                    <a class="nav-link" href="#">Ανακοινώσεις</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Οργανισμός</a>
+                                    <a class="nav-link" href="#">Οργανισμός</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Βοήθεια&Επικοινωνία</a>
+                                    <a class="nav-link" href="#">Βοήθεια&Επικοινωνία</a>
                                 </li>
                             </ul>
                             <!-- Search btn -->
@@ -156,13 +154,13 @@
                         <!-- Nav -->
                         <div class="collapse navbar-collapse" id="dorneNav">
                             <ul class="navbar-nav mr-auto" id="dorneMenu">
-                                    <a class="nav-link" href="index.html" style="font-weight: bold; font-size:18px; ">Αρχική </a>
-									<a class="nav-link" href="index.html"> > </a>
-									<a class="nav-link" href="index.html"style="font-weight: bold; font-size:18px; ">ΑΜΕΑ </a>
-									<a class="nav-link" href="index.html"> > </a>
-									<a class="nav-link" href="" style="font-weight: bold; font-size:18px; ">Στάσεις με προεξοχές </a>
-									<a class="nav-link" href=""> > </a>
-					<!--				<a class="nav-link" href="kaisariani.html"><span style="color:rgba(0, 85, 132,1); font-weight: bold; font-size:18px; ">Δήμος Καισαριανής</span></a> -->
+                                    <a class="nav-link" href="Βέλτιστη-Διαδρομή.php" style="font-weight: bold; font-size:18px; ">Αρχική </a>
+									<a class="nav-link" href="#"> > </a>
+									<a class="nav-link" href="#"style="font-weight: bold; font-size:18px; ">ΑΜΕΑ </a>
+									<a class="nav-link" href="#"> > </a>
+									<a class="nav-link" href="#" style="font-weight: bold; font-size:18px; ">Στάσεις με προεξοχές </a>
+									<a class="nav-link" href="#"> > </a>
+									<a class="nav-link" href="ΑΜΕΑ-ΣτάσειςΜεΠροεξοχές-Καισαριανή.php"><span style="color:rgba(0, 85, 132,1); font-weight: bold; font-size:18px; ">Δήμος Καισαριανής</span></a> 
                     </nav>
                 </div>
             </div>
@@ -188,7 +186,7 @@
                             <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab">
                                 <h2><i class="fa fa-map-marker" aria-hidden="true"> </i> <i style =" font-style:normal;" >Στάση &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </i> <i  style =" font-style:normal;" >Οδός &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </i> <i  style =" font-style:normal;" >Δήμος &nbsp &nbsp &nbsp &nbsp &nbsp </i> <br><br>
 								<?php
-								$db=mysqli_connect('localhost','root','','atoma');
+								$db=mysqli_connect('localhost','root','','test');
 								$sql= "SELECT * FROM kaisariani";
 								$result = $db->query($sql);
 								while($row = $result->fetch_assoc()) {?>
@@ -300,7 +298,7 @@
   });
 }
 
-var countries = ["Μετρό-Ωράριο","Τραμ", "ΜΜΜ","ΑΜΕΑ-ΣτάσειςΜεΠροεξοχές-Καισαριανή","Μετρό-Στάσεις","Αγορά-Επαναφόρτιση", "Τιμές-Εισιτηρίων","ΑΜΕΑ-ΣτάσειςΜεΠροεξοχές-Παπάγος","ΑΜΕΑ-ΣτάσειςΜεΠροεξοχές-Ηλιούπολη"];
+var countries = ["Μετρό-Ωράριο","Τραμ", "ΜΜΜ","ΑΜΕΑ-ΣτάσειςΜεΠροεξοχές-Καισαριανή","Μετρό-Στάσεις","Αγορά-Επαναφόρτιση", "Τιμές-Εισιτηρίων","ΑΜΕΑ-ΣτάσειςΜεΠροεξοχές-Παπάγος","ΑΜΕΑ-ΣτάσειςΜεΠροεξοχές-Ηλιούπολη","Βέλτιστη-Διαδρομή"];
 
 
 autocomplete(document.getElementById("myInput"), countries);
