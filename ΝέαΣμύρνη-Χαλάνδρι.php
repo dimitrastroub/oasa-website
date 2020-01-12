@@ -231,31 +231,31 @@ body {
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ΑΜΕΑ <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-									<a class="dropdown-item" href="amea.html">Πληροφορίες για ΑΜΕΑ</a>	
+									<a class="dropdown-item" href="amea.php">Πληροφορίες για ΑΜΕΑ</a>	
                                         <a class="dropdown-item" href="#">Ανελκυστήρες</a>										<a class="dropdown-item" <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Στάσεις με Προεξοχές <i class="fa fa-angle-down" aria-hidden="true"></i></a>
 											<div class="dropdown-menu" x-placement="right-start" style="position: absolute; transform: translate3d(230px, 30px, 0px); top: 4px; left: 35px; will-change: transform;" >
-                                                <a class="dropdown-item" href="hlioupolh.php">Δήμος Αγίας Βαρβάρας</a>
-												<a class="dropdown-item" href="hlioupolh.php">Δήμος Αγίου Δημήτριου</a>
-												<a class="dropdown-item" href="hlioupolh.php">Δήμος Αθηνών</a>
-												<a class="dropdown-item" href="hlioupolh.php">Δήμος Ελληνικού-Αργυρούπολης</a>
-												<a class="dropdown-item" href="hlioupolh.php">Δήμος Αχαρνών</a>
-												<a class="dropdown-item" href="hlioupolh.php">Δήμος Βύρωνα</a>
-												<a class="dropdown-item" href="hlioupolh.php">Δήμος Γλυφάδας</a>
-												<a class="dropdown-item" href="hlioupolh.php">Δήμος Δάφνης-Υμηττού</a>
-												<a class="dropdown-item" href="hlioupolh.php">Δήμος Ζωγράφου</a>
+                                                <a class="dropdown-item" href="#">Δήμος Αγίας Βαρβάρας</a>
+												<a class="dropdown-item" href="#">Δήμος Αγίου Δημήτριου</a>
+												<a class="dropdown-item" href="#">Δήμος Αθηνών</a>
+												<a class="dropdown-item" href="#">Δήμος Ελληνικού-Αργυρούπολης</a>
+												<a class="dropdown-item" href="#">Δήμος Αχαρνών</a>
+												<a class="dropdown-item" href="#">Δήμος Βύρωνα</a>
+												<a class="dropdown-item" href="#">Δήμος Γλυφάδας</a>
+												<a class="dropdown-item" href="#">Δήμος Δάφνης-Υμηττού</a>
+												<a class="dropdown-item" href="#">Δήμος Ζωγράφου</a>
 												<a class="dropdown-item" href="ΑΜΕΑ-ΣτάσειςΜεΠροεξοχές-Ηλιούπολη.php">Δήμος Ηλιούπολης</a>
 												<a class="dropdown-item" href="ΑΜΕΑ-ΣτάσειςΜεΠροεξοχές-Καισαριανή.php">Δήμος Καισαριανής</a>
-												<a class="dropdown-item" href="hlioupolh.php">Δήμος Καλλιθέας</a>
-												<a class="dropdown-item" href="hlioupolh.php">Δήμος Μελλισίων</a>
-												<a class="dropdown-item" href="hlioupolh.php">Δήμος Νέας Σμύρνης</a>
-												<a class="dropdown-item" href="hlioupolh.php">Δήμος Νέας Χαλκηδόνας-Νέας Φιλαδέφλιας</a>
-												<a class="dropdown-item" href="hlioupolh.php">Δήμος Νίκαιας</a>
+												<a class="dropdown-item" href="#">Δήμος Καλλιθέας</a>
+												<a class="dropdown-item" href="#">Δήμος Μελλισίων</a>
+												<a class="dropdown-item" href="#">Δήμος Νέας Σμύρνης</a>
+												<a class="dropdown-item" href="#">Δήμος Νέας Χαλκηδόνας-Νέας Φιλαδέφλιας</a>
+												<a class="dropdown-item" href="#">Δήμος Νίκαιας</a>
 												<a class="dropdown-item" href="ΑΜΕΑ-ΣτάσειςΜεΠροεξοχές-Παπάγος.php">Δήμος Παπάγου-Χολαργού</a>
-												<a class="dropdown-item" href="hlioupolh.php">Δήμος Παλαιού Φαλήρου</a>
-												<a class="dropdown-item" href="hlioupolh.php">Δήμος Πειραιά</a>
-												<a class="dropdown-item" href="hlioupolh.php">Δήμος Περάματος</a>
-												<a class="dropdown-item" href="hlioupolh.php">Δήμος Περιστερίου</a>
-												<a class="dropdown-item" href="hlioupolh.php">Δήμος Πετρούπολης</a>
+												<a class="dropdown-item" href="#">Δήμος Παλαιού Φαλήρου</a>
+												<a class="dropdown-item" href="#">Δήμος Πειραιά</a>
+												<a class="dropdown-item" href="#">Δήμος Περάματος</a>
+												<a class="dropdown-item" href="#">Δήμος Περιστερίου</a>
+												<a class="dropdown-item" href="#">Δήμος Πετρούπολης</a>
 											</div>
                                         <a class="dropdown-item" href="#">Οδηγίες Προσέγγισης στα ΜΜΜ</a>
                                         <a class="dropdown-item" href="#">Ανακοινώσεις</a>
@@ -611,7 +611,7 @@ body {
   });
 }
 
-var countries = ["Μετρό-Ωράριο","Τραμ", "ΜΜΜ","ΑΜΕΑ-ΣτάσειςΜεΠροεξοχές-Καισαριανή","Μετρό-Στάσεις","Αγορά-Επαναφόρτιση", "Τιμές-Εισιτηρίων","ΑΜΕΑ-ΣτάσειςΜεΠροεξοχές-Παπάγος","ΑΜΕΑ-ΣτάσειςΜεΠροεξοχές-Ηλιούπολη"];
+var countries = ["Μετρό-Ωράριο","Τραμ", "ΜΜΜ","ΑΜΕΑ-ΣτάσειςΜεΠροεξοχές-Καισαριανή","Μετρό-Στάσεις","Αγορά-Επαναφόρτιση", "Τιμές-Εισιτηρίων","ΑΜΕΑ-ΣτάσειςΜεΠροεξοχές-Παπάγος","ΑΜΕΑ-ΣτάσειςΜεΠροεξοχές-Ηλιούπολη","Βέλτιστη-Διαδρομή"];
 
 
 autocomplete(document.getElementById("myInput"), countries);
