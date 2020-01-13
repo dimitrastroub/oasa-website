@@ -41,7 +41,67 @@
 		}
 	}
 	
-	
+	 $email="";
+    $errors=array();
+    
+    if(isset($_POST['register'])){
+        $email= mysqli_real_escape_string($db,$_POST['email']);
+        $password1= mysqli_real_escape_string($db,$_POST['password1']);
+        $password2= mysqli_real_escape_string($db,$_POST['password2']);
+
+   
+        /*$password=md5($password1);*/
+        $password=$password1;
+        $query1= "INSERT INTO users(email,password) VALUES ('$email','$password')";
+        
+        mysqli_query($db,$query1);
+        $_SESSION['email']=$email;
+
+    }
+    
+    if(isset($_POST['login'])){
+        $email= mysqli_real_escape_string($db,$_POST['email']);
+
+        $password= mysqli_real_escape_string($db,$_POST['password']);
+        
+        
+        $query2="SELECT * FROM users WHERE email='$email' AND password='$password'";
+        $result=mysqli_query($db,$query2);
+        if(mysqli_num_rows($result)==1){
+            $_SESSION['email']=$email;
+           
+        }
+    }
+        if(isset($_POST['savechanges'])){
+        $pemail= mysqli_real_escape_string($db,$_POST['pemail']);
+        
+        $name= mysqli_real_escape_string($db,$_POST['name']);
+        
+        $birthday= mysqli_real_escape_string($db,$_POST['birthday']);
+        
+        $hobbies= mysqli_real_escape_string($db,$_POST['hobbies']);
+        
+        $changepass= mysqli_real_escape_string($db,$_POST['changepass']);
+        
+        $number= mysqli_real_escape_string($db,$_POST['number']);
+        
+
+        
+        $query8="UPDATE `users` SET `name`='$name',`birthday`='$birthday',`hobbies`='$hobbies',`number`='$number',`password`='$changepass' WHERE email='$pemail' ";
+        /*$query="UPDATE 'users' SET 'name'='dfbgak' AND 'birthday'='$birthday' AND 'hobbies'='$hobbies' AND 'password'='$changepass' WHERE 'email'='$pemail'";
+        */
+        mysqli_query($db,$query8);
+        
+        }
+    
+    
+    
+    if(isset($_GET['logout'])){
+        
+        unset($_SESSION['email']);
+        header('location: Βέλτιστη-Διαδρομή.php');
+    }
+    
 	
 	
 	
