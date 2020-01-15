@@ -148,7 +148,7 @@
                                         <?php if(isset($_SESSION["email"])): ?>
                                             <p><a style="color:white;">Καλωσήρθες</p> 
                                             <p><strong><?php echo $_SESSION['email']; ?></a></strong></p>
-                                            <p><a href="Βέλτιστη-Διαδρομή.php?logout='1'" style="color:red;">Αποσύνδεση</a></p>
+                                            <p><a href="Βέλτιστη-Διαδρομή.php?logout='0'" style="color:red;">Αποσύνδεση</a></p>
                                         <?php endif ?>
                     </div>
                         </div>
@@ -189,6 +189,31 @@
                         if (mysqli_num_rows($result5) > 0) {
                           // output data of each row
                         while($row = mysqli_fetch_assoc($result5)) {?>
+                <label style="font-size:15px; color:white;">Φοιτητής</label><input type="checkbox" name="check1">  &nbsp; &nbsp;
+                <?php if(isset($_POST['check1'])){
+                    $db=mysqli_connect('localhost','root','','test');
+            $query13="UPDATE `users` SET `foititis`='1' WHERE email='$email'";
+            
+            mysqli_query($db,$query13);
+        
+        
+        } ?>
+                 <label style="font-size:15px; color:white;">ΑΜΕΑ</label><input type="checkbox" name="check2"> &nbsp; &nbsp;
+                 <?php if(isset($_POST['check2'])){
+                    $db=mysqli_connect('localhost','root','','test');
+            $query13="UPDATE `users` SET `amea`='1' WHERE email='$email'";
+            mysqli_query($db,$query13);
+        
+        
+        } ?>
+                 <label style="font-size:15px; color:white;">Άνεργος</label><input type="checkbox" name="check3">
+                 <?php if(isset($_POST['anergos'])){
+                    $db=mysqli_connect('localhost','root','','test');
+            $query13="UPDATE `users` SET `foititis`='1' WHERE email='$email'";
+            mysqli_query($db,$query13);
+        
+        
+        } ?>
 				<div class="gear">
 					<label id='label1'>Αρχικό E-Mail:</label>
 					<input name="pemail" type="text" class="datainfo" style="color:black;" value="<?php echo $row["email"]; ?>"/>
@@ -222,37 +247,6 @@
 					<input name="number" type="text" class="datainfo" style="color:black;" value="<?php echo  $row["number"]; ?>"/>
 				</div>
                 
-				 <label style="font-size:15px; color:white;">Θέλεις να αποθηκεύσεις τα στοιχεία της κάρτας σου; </label><input type="checkbox" id="check">
-                <div id="hidden1">
-                <div class="gear">
-					<label id='label1'>Αριθμός κάρτας:</label>
-					<input name="numbercard" type="text" class="datainfo" style="color:black;" value="<?php echo  $row["numbercard"]; ?>"/>
-					
-				</div>
-				
-				<div class="gear">
-                <label id='label1'>CVV:</label>
-					<input name="cvv" type="text" class="datainfo" style="color:black;" value="<?php echo  $row["cvv"]; ?>"/>
-				</div>
-                <div class="gear">
-                <label id='label1'>Ημερομηνία λήξης:</label>
-					<input name="expirationdate" type="text" class="datainfo" style="color:black;" value="<?php echo  $row["expirationdate"]; ?>"/>
-				</div>
-                </div>
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-                <script>
-                function documentFilter(trigger, target) {
-                    $(trigger).on('change', function () {
-                    $(target).toggle();
-                    });
-                }
-                documentFilter("#check", "#hidden1");
-                </script>
-                <style>
-                #hidden1 {
-                    display:none;
-                }
-                </style>
                 <?php
                         }
                         }
@@ -288,107 +282,8 @@
     <!-- ***** Welcome Area End ***** -->
 
     <!-- ***** Catagory Area Start ***** -->
-    <section class="dorne-catagory-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="all-catagories">
-                        <div class="row">
-							<!-- Single Catagory Area -->
-                            <div class="col-12 col-sm-6 col-md">
-                                <div class="single-catagory-area wow fadeInUpBig" data-wow-delay="0.6s">
-                                    <div class="catagory-content">
-                                        <img src="img/fa-mmm.png" alt="">
-                                        <a href="mmm.html">
-                                            <h6>Μέσα Μαζικής Μεταφοράς</h6>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single Catagory Area -->
-                            <div class="col-12 col-sm-6 col-md">
-                                <div class="single-catagory-area wow fadeInUpBig" data-wow-delay="0.2s">
-                                    <div class="catagory-content">
-                                        <img src="img/travel.png" alt="">
-                                        <a href="#">
-                                            <h6>Μετακίνηση στη πόλη</h6>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single Catagory Area -->
-                            <div class="col-12 col-sm-6 col-md">
-                                <div class="single-catagory-area wow fadeInUpBig" data-wow-delay="0.4s">
-                                    <div class="catagory-content">
-                                        <img src="img/ancient.png" alt="">
-                                        <a href="#">
-                                            <h6>Σημεία Τουριστικού Ενδιαφέροντος</h6>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Single Catagory Area -->
-                            <div class="col-12 col-sm-6 col-md">
-                                <div class="single-catagory-area wow fadeInUpBig" data-wow-delay="0.6s">
-                                    <div class="catagory-content">
-                                        <img src="img/mmm.png" alt="">
-                                        <a href="#">
-                                            <h6>Σταθμοί Μετεπιβίβασης</h6>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <!-- ***** Catagory Area End ***** -->
  
-
-    
-
-    <!-- ***** Clients Area Start ***** -->
-    <div class="dorne-clients-area section-padding-100">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12">
-                    <div class="clients-logo d-md-flex align-items-center justify-content-around">
-                        <img src="img/osy.png" alt="">
-                        <img src="img/stasy.png" alt="">
-                        <img src="img/trainose.png" alt="">
-                        <img src="img/ath.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ***** Clients Area End ***** -->
-
-    <!-- ****** Footer Area Start ****** -->
-    <footer class="dorne-footer-area">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12 d-md-flex align-items-center justify-content-between">
-                    <div class="footer-text">
-                        <p>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved </a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        </p>
-                    </div>
-                    <div class="footer-social-btns">
-                        <a href="#"><i class="fa fa-linkedin" aria-haspopup="true"></i></a>
-                        <a href="#"><i class="fa fa-google" aria-hidden="true"></i></a>
-                        <a href="#"><i class="fa fa-twitter" aria-haspopup="true"></i></a>
-                        <a href="#"><i class="fa fa-facebook" aria-haspopup="true"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- ****** Footer Area End ****** -->
 
     <!-- jQuery-2.2.4 js -->
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
