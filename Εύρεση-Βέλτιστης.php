@@ -56,14 +56,14 @@
         
         mysqli_query($db,$query1);
         $_SESSION['email']=$email;
-
     }
     
     if(isset($_POST['login'])){
         $email= mysqli_real_escape_string($db,$_POST['email']);
-
         $password= mysqli_real_escape_string($db,$_POST['password']);
         
+        $query="UPDATE `users` SET `flag`='1' WHERE email='$email'";
+        mysqli_query($db,$query);
         
         $query2="SELECT * FROM users WHERE email='$email' AND password='$password'";
         $result=mysqli_query($db,$query2);
@@ -74,15 +74,10 @@
     }
         if(isset($_POST['savechanges'])){
         $pemail= mysqli_real_escape_string($db,$_POST['pemail']);
-        
         $name= mysqli_real_escape_string($db,$_POST['name']);
-        
         $birthday= mysqli_real_escape_string($db,$_POST['birthday']);
-        
         $hobbies= mysqli_real_escape_string($db,$_POST['hobbies']);
-        
         $changepass= mysqli_real_escape_string($db,$_POST['changepass']);
-        
         $number= mysqli_real_escape_string($db,$_POST['number']);
         
 
@@ -97,10 +92,39 @@
     
     
     if(isset($_GET['logout'])){
-        
+        $email=$_SESSION['email'];
+ 
+        $query12="UPDATE `users` SET `flag`='0' WHERE email='$email'";
+        mysqli_query($db,$query12);
         unset($_SESSION['email']);
+        
         header('location: Βέλτιστη-Διαδρομή.php');
     }
+    
+    if(isset($_POST['plhrwmh'])){
+		
+	
+		$sql = "SELECT Id, Eidos, Timh,Number FROM payment";
+		$result = $db->query($sql);
+	
+		$txt1 = "inp";
+		$txt2 = 1;
+
+		while($txt2 < 57 ) {
+			$temaxia = $_POST[$txt1 . $txt2];
+			$sql1 = "UPDATE payment SET Number= $temaxia WHERE Id = $txt2" ;
+			
+			$db->query($sql1);
+			$txt2++;
+			
+		}
+		
+		$sql = $db->query("SELECT SUM(Timh*Number)  AS value_sum FROM payment WHERE Number>0");
+		$row = $sql->fetch_assoc();
+		echo number_format((float)$row['value_sum'], 2, '.', '');
+		
+		header("Location: payment.php"); 
+	}
     
 	
 	
