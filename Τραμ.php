@@ -16,10 +16,10 @@
     <link rel="icon" href="img/logo.png">
 
     <!-- Core Stylesheet -->
-    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet"  href="style.css?v=<?php echo time(); ?>">
 
     <!-- Responsive CSS -->
-    <link href="css/responsive/responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/responsive/responsive.css?v=<?php echo time(); ?>">
 
 </head>
 
@@ -406,7 +406,7 @@ myInput.onkeyup = function() {
 						<div class="tab-content" id="nav-tabContent">
                             <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab" style="text-align:center">
                                 <h6>Γραμμή 3 "Θουκυδίδης" <br> Στάδιο Ειρήνης και Φιλίας - Ασκληπιείο Βούλας</h6>
-                                    <img id="myImg" src="img/tram-grammi3.png"  style="width:200px;height:200px; align:right;">
+                                    <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="img/tram-grammi3.png"  style="width:200px;height:200px; align:right;">
 									<ul style="list-style-type:disc; color: white; text-align: center;">
                                     &nbsp;
 									  <li>Στάδιο Ειρήνης και Φιλίας – σύνδεση με τη γραμμή 1 του μετρό (Η.Σ.Α.Π.)</li>
@@ -448,7 +448,7 @@ myInput.onkeyup = function() {
 							</div>
 							<div class="tab-pane fade" id="nav-events" role="tabpanel" aria-labelledby="nav-events-tab" style="text-align:center">
                                 <h6>Γραμμή 4 "Αριστοτέλης" <br> Σύνταγμα - Στάδιο Ειρήνης και Φιλίας </h6>
-									<img id="myImg1" src="img/tram-grammi4.png"  style="width:200px;height:200px; align:right;">
+									<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="img/tram-grammi4.png"  style="width:200px;height:200px; align:right;">
 									<ul style="list-style-type:disc; color: white; text-align: center;">
 										&nbsp;
 										<li>Σύνταγμα – σύνδεση με τις γραμμές 2 και 3 του μετρό</li>
@@ -484,7 +484,7 @@ myInput.onkeyup = function() {
 							</div>
 							<div class="tab-pane fade" id="nav-places2" role="tabpanel" aria-labelledby="nav-places2-tab" style="text-align:center">
                                 <h6>Γραμμή 5 "Πλάτωνας" <br> Σύνταγμα - Ασκληπιείο Βούλας </h6>
-									<img id="myImg2" src="img/tram-grammi5.png"  style="width:200px;height:200px; align:right;">
+									<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="img/tram-grammi5.png"  style="width:200px;height:200px; align:right;">
 									<ul style="list-style-type:disc; color: white; text-align: center;">
 										&nbsp;
 										<li>Σύνταγμα – σύνδεση με τις γραμμές 2 και 3 του μετρό</li>
@@ -537,12 +537,24 @@ myInput.onkeyup = function() {
 	
 		
 		
-		<div id="myModal" class="modal">
-		  <span class="close">&times;</span>
+		<div id="myModal" class="modal" onclick="window.location = Τραμ.php;">
+		<span  class="close" title="Close Modal" >&times;</span>
+									
+		 <!-- <span class="close">&times;</span>-->
 		  <img class="modal-content" id="img01">
 		  <div id="caption"></div>
 		</div>
-		
+		<script>
+		function bigImg(x) {
+		  x.style.height = "520px";
+		  x.style.width = "520px";
+		}
+
+		function normalImg(x) {
+		  x.style.height = "200px";
+		  x.style.width = "200px";
+		}
+		</script>
 		<script>
 		// Get the modal
 		var modal = document.getElementById("myModal");
