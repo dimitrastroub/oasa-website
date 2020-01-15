@@ -1,7 +1,7 @@
 <?php
     session_start();
     
-    $db=mysqli_connect('localhost','root','','test');
+    $db=mysqli_connect('localhost','root','','sdi1600021');
 	echo "\n";	
 	
 	if(isset($_POST['anazhthsh'])){
