@@ -1,3 +1,4 @@
+<?php include ('Εύρεση-Βέλτιστης.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -136,12 +137,36 @@
                                     <a class="nav-link" href="#">Επικοινωνία</a>
                                 </li>
                             </ul>
+                            <?php
+                            $db=mysqli_connect('localhost','root','','test');
+                            $query42="SELECT `email` FROM `users` WHERE flag='1'";
+                            $result=mysqli_query($db,$query42);
+                            if(mysqli_num_rows($result)==1){
+                                
+                            ?>
+                            <div class="dorne-search-btn">
+                                <a id="search-btn" href="#"><i class="fa fa-search" aria-hidden="true"></i>Αναζήτηση</a>
+                            </div>
+                            <div class="content">
+                                       <style>
+                                       p{
+                                           margin: 0;
+                                       }
+                                       </style>
+                                      
+                                            <p><a style="color:white;">Καλωσήρθες</p> 
+                                            <p><strong><?php echo $_SESSION['email']; ?></a></strong></p>
+                                            <p><a href="Βέλτιστη-Διαδρομή.php?logout='0' " style="color:red;">Αποσύνδεση</a></p>
+                                            <p><a href="edit.php" name="edit" style="color:navy;" >Επεξεργασία Προφίλ</a></p>
+                            </div>
+                            <?php } else { ?>
                             <!-- Search btn -->
                             <?php 
                             if(isset($_POST['login'])){ ?>
                                 <div class="dorne-search-btn">
                                 <a id="search-btn" href="#"><i class="fa fa-search" aria-hidden="true"></i>Αναζήτηση</a>
                             </div>
+                            
                             
                             <div class="content" method="post" action="">
                                        <style>
@@ -152,7 +177,7 @@
                                         <?php if(isset($_SESSION["email"])): ?>
                                             <p><a style="color:white;">Καλωσήρθες</p> 
                                             <p><strong><?php echo $_SESSION['email']; ?></a></strong></p>
-                                            <p><a href="Βέλτιστη-Διαδρομή.php" style="color:red;">Αποσύνδεση</a></p>
+                                            <p><a href="Βέλτιστη-Διαδρομή.php?logout='0' " style="color:red;">Αποσύνδεση</a></p>
                                             <p><a href="edit.php" name="edit" style="color:navy;" >Επεξεργασία Προφίλ</a></p>
                                         <?php endif ?>
                     </div>
@@ -170,7 +195,7 @@
                         <!--login-->
 								<div id="id01" class="modal1">
 								  
-								  <form class="modal1-content animate" method="post" action="Βέλτιστη-Διαδρομή.php">
+								  <form class="modal1-content animate" method="post" action="payment.php">
 									<div class="imgcontainer">
 									  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
 									
@@ -330,12 +355,9 @@ myInput.onkeyup = function() {
                             
                             <!-- Add listings btn -->
                             
-
                         </div>
-                    </nav>
-                    <?php 
-                            } 
-                            ?>
+                    </nav> 
+                         
 					<nav class="h-30 navbar navbar-expand-lg">
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dorneNav" aria-controls="dorneNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
                         <!-- Nav -->
@@ -347,6 +369,12 @@ myInput.onkeyup = function() {
 									<a class="nav-link" href="#"> ></a>
 									<a class="nav-link" href="Πληροφορίες-ΑΜΕΑ.php"><span style="color:rgba(0, 85, 132,1); font-weight: bold; font-size:18px; ">Πληροφορίες</span></a>
                     </nav>
+                     <?php 
+                            } 
+                            ?>
+                            <?php 
+                            } 
+                            ?>
                 </div>
             </div>
         </div>
