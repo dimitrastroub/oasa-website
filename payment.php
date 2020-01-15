@@ -141,7 +141,7 @@
                                 </li>
                             </ul>
                             <?php
-                            $db=mysqli_connect('localhost','root','','test');
+                            $db=mysqli_connect('localhost','root','','sdi1600021');
                             $query42="SELECT `email` FROM `users` WHERE flag='1'";
                             $result=mysqli_query($db,$query42);
                             if(mysqli_num_rows($result)==1){
@@ -162,6 +162,10 @@
                                             <p><a href="Βέλτιστη-Διαδρομή.php?logout='0' " style="color:red;">Αποσύνδεση</a></p>
                                             <p><a href="edit.php" name="edit" style="color:navy;" >Επεξεργασία Προφίλ</a></p>
                             </div>
+							
+						</div>
+					 </nav>
+					
                             <?php } else { ?>
                             <!-- Search btn -->
                             <?php 
@@ -183,7 +187,8 @@
                                             <p><a href="Βέλτιστη-Διαδρομή.php" style="color:red;">Αποσύνδεση</a></p>
                                             <p><a href="edit.php" name="edit" style="color:navy;" >Επεξεργασία Προφίλ</a></p>
                                         <?php endif ?>
-                    </div>
+							</div>
+						
                             <?php 
                             }
                             else { ?>
@@ -192,7 +197,7 @@
                             </div>
                             <!-- Signin btn -->
                             <div class="dorne-signin-btn">
-                                <a onclick="document.getElementById('id01').style.display='block'" style="font-style:normal; color:white; font-weight:600;">Είσοδος/Εγγραφή</a>
+                                <a onclick="document.getElementById('id01').style.display='block'" style="font-style:normal; color:white; font-weight:600; cursor: default;">Είσοδος/Εγγραφή</a>
                             </div> 
 						
                         <!--login-->
@@ -361,6 +366,11 @@ myInput.onkeyup = function() {
                         </div>
                     </nav> 
 					
+					 <?php 
+                            } 
+                            ?>
+					<?php } ?>
+					
 					<nav class="h-30 navbar navbar-expand-lg" style="margin-bottom: 20px">
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dorneNav" aria-controls="dorneNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
                         <!-- Nav -->
@@ -374,10 +384,10 @@ myInput.onkeyup = function() {
 									<a class="nav-link" href="#"> ></a>
 									<a class="nav-link" href="payment.php"><span style="color:rgba(0, 85, 132,1); font-weight: bold; font-size:18px;">Πληρωμή</span></a>
                     </nav>
-					<?php 
-                            } 
-                            ?>
-                            <?php } ?>
+					
+					
+					             
+					
                 </div>
             </div>
         </div>
@@ -410,7 +420,7 @@ myInput.onkeyup = function() {
 								
 	
 						<h3 style="color:white">Το Συνολικό ποσό πληρωμής είναι:
-								<?php	 $db=mysqli_connect('localhost','root','','test');
+								<?php	 $db=mysqli_connect('localhost','root','','sdi1600021');
 							$sql = $db->query("SELECT SUM(Timh*Number)  AS value_sum FROM payment WHERE Number>0");
 							$row = $sql->fetch_assoc();
 							echo number_format((float)$row['value_sum'], 2, '.', '');
@@ -418,7 +428,7 @@ myInput.onkeyup = function() {
 					?> € <br> <br>
 					</h3>
                     <?php 
-                        $db1=mysqli_connect('localhost','root','','test');
+                        $db1=mysqli_connect('localhost','root','','sdi1600021');
                         $email=$_SESSION['email'];
                         $query3="SELECT * FROM users WHERE email='$email'"; 
                         $result5=mysqli_query($db1,$query3);
@@ -508,7 +518,7 @@ myInput.onkeyup = function() {
 								
 	
 						<h3 style="color:white">Το Συνολικό ποσό πληρωμής είναι:
-								<?php	 $db=mysqli_connect('localhost','root','','test');
+								<?php	 $db=mysqli_connect('localhost','root','','sdi1600021');
 							$sql = $db->query("SELECT SUM(Timh*Number)  AS value_sum FROM payment WHERE Number>0");
 							$row = $sql->fetch_assoc();
 							echo number_format((float)$row['value_sum'], 2, '.', '');
