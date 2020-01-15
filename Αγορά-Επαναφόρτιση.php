@@ -155,7 +155,7 @@
                                 </li>
                             </ul>
                             <?php
-                            $db=mysqli_connect('localhost','root','','test');
+                            $db=mysqli_connect('localhost','root','','sdi1600021');
                             $query42="SELECT `email` FROM `users` WHERE flag='1'";
                             $result=mysqli_query($db,$query42);
                             if(mysqli_num_rows($result)==1){
@@ -176,6 +176,8 @@
                                             <p><a href="Βέλτιστη-Διαδρομή.php?logout='0' " style="color:red;">Αποσύνδεση</a></p>
                                             <p><a href="edit.php" name="edit" style="color:navy;" >Επεξεργασία Προφίλ</a></p>
                             </div>
+						</div>
+					 </nav>
                             <?php } else { ?>
                             <!-- Search btn -->
                             <?php 
@@ -205,7 +207,7 @@
                             </div>
                             <!-- Signin btn -->
                             <div class="dorne-signin-btn">
-                                <a onclick="document.getElementById('id01').style.display='block'" style="font-style:normal; color:white; font-weight:600;">Είσοδος/Εγγραφή</a>
+                                <a onclick="document.getElementById('id01').style.display='block'" style="font-style:normal; color:white; font-weight:600; cursor: default;">Είσοδος/Εγγραφή</a>
                             </div> 
 						
                         <!--login-->
@@ -216,7 +218,7 @@
 									  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
 									
 									</div>
-                                    <i style="font-weight:400; font-style:normal; font-size:20px; padding-left:18px;">Δεν είσαι μέλος;<a onclick="document.getElementById('id02').style.display='block'"><i style="color:lightblue; font-style:normal; font-size:20px;"> Εγγραφή</i></a></i>
+                                    <i style="font-weight:400; font-style:normal; font-size:20px; padding-left:18px;">Δεν είσαι μέλος;<a onclick="document.getElementById('id02').style.display='block'"><i style="color:lightblue; font-style:normal; font-size:20px; cursor: default;"> Εγγραφή</i></a></i>
 									<div class="container">
                                       
 									  <label for="uname" style="font-weight:400; font-size:20px;"><b>E-mail</b></label>
@@ -370,13 +372,13 @@ myInput.onkeyup = function() {
 								</div>
                             
                             <!-- Add listings btn -->
-                            <?php 
+                            
+                        </div>
+                    </nav>
+                 <?php 
                             } 
                             ?>
                             <?php } ?>
-                        </div>
-                    </nav>
-                 
 							
 					<nav class="h-30 navbar navbar-expand-lg">
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dorneNav" aria-controls="dorneNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
@@ -399,9 +401,21 @@ myInput.onkeyup = function() {
     
     	<br><br>
 		
-		
-	
-        <div class="container h-100">
+		<?php
+		$db=mysqli_connect('localhost','root','','sdi1600021');
+        $query42="SELECT amea,foititis,anergos FROM `users` WHERE flag='1'";
+        $result=mysqli_query($db,$query42);
+        if(mysqli_num_rows($result)==1){
+         ?> 
+			<br><br>
+			<h2 style="text-align: center; font-size: 20px; " >Δικαιούσαι μειωμένο εισιτήριο!! </h2>
+			<h2 style="text-align: center; font-size: 15px;" >Επαναφόρτισε την προσωποποιημένη κάρτα σου </h2>
+			<h2 style="text-align: center; font-size: 15px;" >Ή δες πού μπορείς να εκδόσεις άμεσα νέα κάρτα: </h2>
+			
+			<h2 onclick= document.location="Σημεία-Έκδοσης-Επαναφόρτισης.php"  style=" text-align: center; text-decoration: underline; font-size: 14px; font-weight:600; cursor: default;">Σημεία Έκδοσης/Επαναφόρτισης Καρτών/Εισιτηρίων</h2>
+           
+		   
+			<div class="container h-100">
             <div class="row h-100 align-items-center justify-content-center">
                 <div class="col-12 col-md-10">
                    <!-- <div class="hero-content">
@@ -414,8 +428,8 @@ myInput.onkeyup = function() {
 						<form method="post" action="Αγορά-Επαναφόρτιση.php" style="font-size:15px; " >
                         <div class="nav nav-tabs" id="heroTab" role="tablist" >
 						
-                            <a class="nav-item nav-link active" id="nav-places-tab" data-toggle="tab" href="#nav-places" role="tab" aria-controls="nav-places" aria-selected="true" style="width: 50%">Αγορα</a>
-                            <a class="nav-item nav-link" id="nav-events-tab" data-toggle="tab" href="#nav-events" role="tab" aria-controls="nav-events" aria-selected="false" style="width: 50%">Επαναφορτιση</a>
+                            <a class="nav-item nav-link active" id="nav-places-tab" data-toggle="tab" href="#nav-places" role="tab" aria-controls="nav-places" aria-selected="true" style="width: 50%">Επαναφορτιση</a>
+                            <a class="nav-item nav-link" id="nav-events-tab" data-toggle="tab" href="#nav-events" role="tab" aria-controls="nav-events" aria-selected="false" style="width: 50%">Αγορα</a>
                         </div>
                         <!-- Tabs Content -->
 						
@@ -423,12 +437,251 @@ myInput.onkeyup = function() {
                         <div class="tab-content" id="nav-tabContent" style="margin-top: 0px" >
 						
 							
-                            <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab" >
-                                <h6>Εισιτήρια μικρής διάρκειας (χωρίς μετακινήσεις προς Αεροδρόμιο)</h6>
-								
+                            <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab" style= "text-align: center;" >
+                                
+								<h6>Εισιτήρια μικρής διάρκειας (χωρίς μετακινήσεις προς Αεροδρόμιο)</h6>
+                                <table style="width:80%; margin-left:auto; margin-right:auto;">
+											  <tr>
+												<th></th>
+												<th>Ανώνυμη κάρτα (Ολόκληρο)</th>
+												<th>Τεμάχια</th>
+												<th>Ανώνυμη κάρτα (Μειωμένο)</th>
+												<th>Προσωποποιημένη κάρτα (Ολόκληρο)</th>
+												<th>Τεμάχια</th>
+												<th style="font-size: 18px; color: rgb(33, 186, 198);">Προσωποποιημένη κάρτα (Μειωμένο)</th>
+												<th>Τεμάχια</th>
+											  </tr>
+											  <tr>
+												<td>Ένα εισιτήριο 90 λεπτών</td>
+												<td>1.40 €</td>
+												<th><input type="number" name="inp12" id="12" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>Χ</td>
+												<td>1.40 €</td>
+												<th><input type="number" name="inp13" id="13" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>0.60 €</td>
+												<th><input type="number" name="inp14" id="14" min="0" max="11" value="0" step="1" style="width:100%"></th>
+											  </tr>
+											  <tr>
+												<td>Δύο εισιτήρια 90 λεπτών</td>
+												<td>2.70 €</td>
+												<th><input type="number" name="inp15" id="15" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>Χ</td>
+												<td>2.70 €</td>
+												<th><input type="number" name="inp16" id="16" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>1.20 €</td>
+												<th><input type="number" name="inp17" id="17" min="0" max="11" value="0" step="1" style="width:100%"></th>
+											  </tr>
+											  <tr>
+												<td>Πέντε εισιτήρια 90 λεπτών</td>
+												<td>6.50 €</td>
+												<th><input type="number" name="inp18" id="18" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>Χ</td>
+												<td>6.50 €</td>
+												<th><input type="number" name="inp19" id="19" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>3.00 €</td>
+												<th><input type="number" name="inp20" id="20" min="0" max="11" value="0" step="1" style="width:100%"></th>
+											  </tr>
+											  <tr>
+												<td>Έντεκα εισιτήρια 90 λεπτών(1 δωρεάν)</td>
+												<td>13.50 €</td>
+												<th><input type="number" name="inp21" id="21" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>Χ</td>
+												<td>13.50 €</td>
+												<th><input type="number" name="inp22" id="22" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>6.00 €</td>
+												<th><input type="number" name="inp23" id="23" min="0" max="11" value="0" step="1" style="width:100%"></th>
+											  </tr>
+											  <tr>
+												<td>Εισιτήριο 24 ωρών</td>
+												<td>4,5 €</td>
+												<th><input type="number" name="inp24" id="24" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>Χ</td>
+												<td>4,5 €</td>
+												<th><input type="number" name="inp25" id="25" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>Χ </td>
+												<th></th>
+
+											  </tr>
+											  <tr>
+												<td>Εισιτήριο 5 ημερών</td>
+												<td>9 €</td>
+												<th><input type="number" name="inp26" id="26" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>Χ</td>
+												<td>9 €</td>
+												<th><input type="number" name="inp27" id="27" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>Χ</td>
+												<th></th>
+
+											  </tr>
+										</table> 
 										
+										<br><br><br>
+										<h6>Εισιτήρια μικρής διάρκειας (με μετακινήσεις προς Αεροδρόμιο)</h6>
+										
+										<table style="width:80%; margin-left:auto; margin-right:auto;">
+											<tr>
+												<th></th>
+												<th>Ανώνυμη κάρτα (Ολόκληρο)</th>
+												<th>Τεμάχια</th>
+												<th>Ανώνυμη κάρτα (Μειωμένο)</th>
+												<th>Προσωποποιημένη κάρτα (Ολόκληρο)</th>
+												<th>Τεμάχια</th>
+												<th style="font-size: 18px; color: rgb(33, 186, 198);">Προσωποποιημένη κάρτα (Μειωμένο)</th>
+												<th>Τεμάχια</th>
+											 </tr>
+											  
+											<tr>
+												<td>Εισιτήριο Λεωφορείου Express για Αεροδρόμιο</td>
+												<td>6 €</td>
+												<th><input type="number" name="inp28" id="28" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>Χ</td>
+												<td>6 €</td>
+												<th><input type="number" name="inp29" id="29" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>3 €</td>
+												<th><input type="number" name="inp30" id="30" min="0" max="11" value="0" step="1" style="width:100%"></th>
+											</tr>
+											<tr>
+												<td>Εισιτήριο Μετρό για Αεροδρόμιο</td>
+												<td>10 €</td>
+												<th><input type="number" name="inp31" id="31" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>Χ</td>
+												<td>10 €</td>
+												<th><input type="number" name="inp32" id="32" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>5 €</td>
+												<th><input type="number" name="inp33" id="33" min="0" max="11" value="0" step="1" style="width:100%"></th>
+											</tr>
+											<tr>
+												<td>Εισιτήριο Μετρό μετ επιστροφής για Αεροδρόμιο (εντός 48 ωρών)</td>
+												<td>18 €</td>
+												<th><input type="number" name="inp34" id="34" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>Χ</td>
+												<td>18 €</td>
+												<th><input type="number" name="inp35" id="35" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>Χ</td>
+												<th></th>
+											</tr>
+											<tr>
+												<td>Εισιτήριο Μετρό μεταξύ Αεροδρομίου & Παλλήνη-Κάντζα-Κορωπί</td>
+												<td>6 €</td>
+												<th><input type="number" name="inp36" id="36" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>Χ</td>
+												<td>6 €</td>
+												<th><input type="number" name="inp37" id="37" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>3 €</td>
+												<th><input type="number" name="inp38" id="38" min="0" max="11" value="0" step="1" style="width:100%"></th>
+											</tr>
+											<tr>
+												<td>Τουριστικό εισιτήριο 3 ημερών (περιλαμβάνει μετακινήσεις προς Αεροδρόμιο)</td>
+												<td>22 €</td>
+												<th><input type="number" name="inp39" id="39" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>Χ</td>
+												<td>22 €</td>
+												<th><input type="number" name="inp40" id="40" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>Χ</td>
+												<th></th>
+											</tr>
+										</table> 
+										
+										<br><br><br>
+										<h6>Εισιτήρια μεγάλης διάρκειας</h6>
+										
+										<table style="width:80%; margin-left:auto; margin-right:auto;">
+											<tr>
+												<th></th>
+												<th>Ανώνυμη κάρτα (Ολόκληρο)</th>
+												<th>Ανώνυμη κάρτα (Μειωμένο)</th>
+												<th>Προσωποποιημένη κάρτα (Ολόκληρο)</th>
+												<th>Τεμάχια</th>
+												<th style="font-size: 18px; color: rgb(33, 186, 198);">Προσωποποιημένη κάρτα (Μειωμένο)</th>
+												<th>Τεμάχια</th>
+											</tr>
+											<tr>
+												<td>Εισιτήριο 30 ημερών (χωρίς μετακινήσεις προς Αεροδρόμιο)</td>
+												<td>Χ</td>
+												<td>Χ</td>
+												<td>30 €</td>
+												<th><input type="number" name="inp41" id="41" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>15 €</td>
+												<th><input type="number" name="inp42" id="42" min="0" max="11" value="0" step="1" style="width:100%"></th>
+											</tr>
+											<tr>
+												<td>Εισιτήριο 30 ημερών (με μετακινήσεις προς Αεροδρόμιο)</td>
+												<td>Χ</td>
+												<td>Χ</td>
+												<td>49 €</td>
+												<th><input type="number" name="inp43" id="43" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>25 €</td>
+												<th><input type="number" name="inp44" id="44" min="0" max="11" value="0" step="1" style="width:100%"></th>
+											</tr>
+											<tr>
+												<td>Εισιτήριο 90 ημερών (χωρίς μετακινήσεις προς Αεροδρόμιο)</td>
+												<td>Χ</td>
+												<td>Χ</td>
+												<td>85 €</td>
+												<th><input type="number" name="inp45" id="45" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>43 €</td>
+												<th><input type="number" name="inp46" id="46" min="0" max="11" value="0" step="1" style="width:100%"></th>
+											</tr>
+											<tr>
+												<td>Εισιτήριο 90 ημερών (με μετακινήσεις προς Αεροδρόμιο)</td>
+												<td>Χ</td>
+												<td>Χ</td>
+												<td>142 €</td>
+												<th><input type="number" name="inp47" id="47" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>71 €</td>
+												<th><input type="number" name="inp48" id="48" min="0" max="11" value="0" step="1" style="width:100%"></th>
+											</tr>
+											<tr>
+												<td>Εισιτήριο 180 ημερών (χωρίς μετακινήσεις προς Αεροδρόμιο)</td>
+												<td>Χ</td>
+												<td>Χ</td>
+												<td>170 €</td>
+												<th><input type="number" name="inp49" id="49" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>85 €</td>
+												<th><input type="number" name="inp50" id="50" min="0" max="11" value="0" step="1" style="width:100%"></th>
+											</tr>
+											<tr>
+												<td>Εισιτήριο 180 ημερών (με μετακινήσεις προς Αεροδρόμιο)</td>
+												<td>Χ</td>
+												<td>Χ</td>
+												<td>250 €</td>
+												<th><input type="number" name="inp51" id="51" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>125 €</td>
+												<th><input type="number" name="inp52" id="52" min="0" max="11" value="0" step="1" style="width:100%"></th>
+											</tr>
+											<tr>
+												<td>Εισιτήριο 365 ημερών (χωρίς μετακινήσεις προς Αεροδρόμιο)</td>
+												<td>Χ</td>
+												<td>Χ</td>
+												<td>330 €</td>
+												<th><input type="number" name="inp53" id="53" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>165 €</td>
+												<th><input type="number" name="inp54" id="54" min="0" max="11" value="0" step="1" style="width:100%"></th>
+											</tr>
+											<tr>
+												<td>Εισιτήριο 365 ημερών (με μετακινήσεις προς Αεροδρόμιο)</td>
+												<td>Χ</td>
+												<td>Χ</td>
+												<td>490 €</td>
+												<th><input type="number" name="inp55" id="55" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>245 €</td>
+												<th><input type="number" name="inp56" id="56" min="0" max="11" value="0" step="1" style="width:100%"></th>
+											</tr>
+										</table> 	
+										
+										<br>
+										<input type="button" onclick="myFunction()" value="Εμφάνιση του έως τώρα συνολικού ποσού πληρωμής" />
+										<p id="demo1" style="color:white" >  </p>
+									<!--	<input type="button" name="plhrwmh" onclick="location.href='payment.html';" value="Μεταφορά στη διαδικασία πληρωμής" />-->
+										<br>
+										<button name="plhrwmh" type="submit" onclick="location.href='payment.php';" >Μεταφορά στη διαδικασία πληρωμής</button>
+									
+                            </div>
+                            <div class="tab-pane fade" id="nav-events" role="tabpanel" aria-labelledby="nav-events-tab" style= "text-align: center;">
+							
+								<h6>Εισιτήρια μικρής διάρκειας (χωρίς μετακινήσεις προς Αεροδρόμιο)</h6>
 								
-										 <table style="width:80%">
+										 <table style="width:80%; margin-left:auto; margin-right:auto;">
 											  <tr>
 												<th></th>
 												<th>Πολλαπλό εισιτήριο (Ολόκληρο)</th>
@@ -477,7 +730,7 @@ myInput.onkeyup = function() {
 							   <br><br><br>
 								<h6>Εισιτήρια μικρής διάρκειας (με μετακινήσεις προς Αεροδρόμιο)</h6>
 								
-								<table style="width:80%" color=#fff  >
+								<table style="width:80%; margin-left:auto; margin-right:auto;">
 											  <tr>
 												<th></th>
 												<th>Πολλαπλό εισιτήριο (Ολόκληρο)</th>
@@ -526,6 +779,149 @@ myInput.onkeyup = function() {
 										<p id="demo" style="color:white" >  </p>
 									<!--	<input type="button" name="plhrwmh"  value="Μεταφορά στη διαδικασία πληρωμής" />
 										onclick="location.href='payment.html';"-->
+										<br>
+										<button name="plhrwmh" type="submit"  >Μεταφορά στη διαδικασία πληρωμής</button>
+								
+                            </div>
+							
+                        </div>
+						</form>
+                    </div>
+                </div>
+            </div>
+        </div>
+		   
+		<?php				
+		}
+		else{
+        ?>
+	
+        <div class="container h-100">
+            <div class="row h-100 align-items-center justify-content-center">
+                <div class="col-12 col-md-10">
+                   <!-- <div class="hero-content">
+                        <h2>Discover places near you</h2>
+                        <h4>This is the best guide of your city</h4>
+                    </div>-->
+                    <!-- Hero Search Form -->
+                    <div class="hero-search-form" >
+                        <!-- Tabs -->
+						<form method="post" action="Αγορά-Επαναφόρτιση.php" style="font-size:15px; " >
+                        <div class="nav nav-tabs" id="heroTab" role="tablist" >
+						
+                            <a class="nav-item nav-link active" id="nav-places-tab" data-toggle="tab" href="#nav-places" role="tab" aria-controls="nav-places" aria-selected="true" style="width: 50%">Αγορα</a>
+                            <a class="nav-item nav-link" id="nav-events-tab" data-toggle="tab" href="#nav-events" role="tab" aria-controls="nav-events" aria-selected="false" style="width: 50%">Επαναφορτιση</a>
+                        </div>
+                        <!-- Tabs Content -->
+						
+						 
+                        <div class="tab-content" id="nav-tabContent" style="margin-top: 0px" >
+						
+							
+                            <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab" style= "text-align: center;" >
+                                <h6>Εισιτήρια μικρής διάρκειας (χωρίς μετακινήσεις προς Αεροδρόμιο)</h6>
+								
+										
+								
+										 <table style="width:80%; margin-left:auto; margin-right:auto;">
+											  <tr>
+												<th></th>
+												<th>Πολλαπλό εισιτήριο (Ολόκληρο)</th>
+												<th>Τεμάχια</th>
+												<th>Πολλαπλό εισιτήριο (Μειωμένο)</th>
+											  </tr>
+											  <tr>
+												<td>Ένα εισιτήριο 90 λεπτών</td>
+												<td>1.40 €</td>
+												
+												<th><input type="number" name="inp1" id="1" min="0" max="11" value="0" step="1" style="width:100%" ></th>
+												<td>Χ</td>
+											  </tr>
+											  <tr>
+												<td>Δύο εισιτήρια 90 λεπτών</td>
+												<td>2.70 €</td>
+												<th><input type="number" name="inp2" id="2" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>Χ</td>
+											  </tr>
+											  <tr>
+												<td>Πέντε εισιτήρια 90 λεπτών</td>
+												<td>6.50 €</td>
+												<th><input type="number" name="inp3" id="3" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>Χ</td>
+											  </tr>
+											  <tr>
+												<td>Έντεκα εισιτήρια 90 λεπτών(1 δωρεάν)</td>
+												<td>13.50 €</td>
+												<th><input type="number" name="inp4" id="4" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>Χ</td>
+											  </tr>
+											  <tr>
+												<td>Εισιτήριο 24 ωρών</td>
+												<td>4,5 €</td>
+												<th><input type="number" name="inp5" id="5" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>Χ</td>
+											  </tr>
+											  <tr>
+												<td>Εισιτήριο 5 ημερών</td>
+												<td>9 €</td>
+												<th><input type="number" name="inp6" id="6" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>Χ</td>
+											  </tr>
+										</table> 
+                               
+							   <br><br><br>
+								<h6>Εισιτήρια μικρής διάρκειας (με μετακινήσεις προς Αεροδρόμιο)</h6>
+								
+								<table style="width:80%; margin-left:auto; margin-right:auto;">
+											  <tr>
+												<th></th>
+												<th>Πολλαπλό εισιτήριο (Ολόκληρο)</th>
+												<th>Τεμάχια</th>
+												<th>Πολλαπλό εισιτήριο (Μειωμένο)</th>
+											  </tr>
+											  <tr>
+												<td>Εισιτήριο Λεωφορείου Express για Αεροδρόμιο</td>
+												<td>6 €</td>
+												<th><input type="number" name="inp7" id="7" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>Χ</td>
+											  </tr>
+											  <tr>
+												<td>Εισιτήριο Μετρό για Αεροδρόμιο</td>
+												<td>10 €</td>
+												<th><input type="number" name="inp8" id="8" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>Χ</td>
+											  </tr>
+											  <tr>
+												<td>Εισιτήριο Μετρό μετ επιστροφής για Αεροδρόμιο (εντός 48 ωρών)</td>
+												<td>18 €</td>
+												<th><input type="number" name="inp9" id="9" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>Χ</td>
+											  </tr>
+											  <tr>
+												<td>Εισιτήριο Μετρό μεταξύ Αεροδρομίου & Παλλήνη-Κάντζα-Κορωπί</td>
+												<td>6 €</td>
+												<th><input type="number" name="inp10" id="10" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>Χ</td>
+											  </tr>
+											  <tr>
+												<td>Τουριστικό εισιτήριο 3 ημερών (περιλαμβάνει μετακινήσεις προς Αεροδρόμιο)</td>
+												<td>22 €</td>
+												<th><input type="number" name="inp11" id="11" min="0" max="11" value="0" step="1" style="width:100%"></th>
+												<td>Χ</td>
+											  </tr>
+										</table> 
+										
+										
+										
+										<br>
+										
+										
+									<!--	<button type="button" onclick="myFunction()">Submit</button>-->
+										<input type="button" onclick="myFunction()" value="Εμφάνιση του έως τώρα συνολικού ποσού πληρωμής" />
+										<p id="demo" style="color:white" >  </p>
+									<!--	<input type="button" name="plhrwmh"  value="Μεταφορά στη διαδικασία πληρωμής" />
+										onclick="location.href='payment.html';"-->
+										
 										<button name="plhrwmh" type="submit"  >Μεταφορά στη διαδικασία πληρωμής</button>
 										
 										
@@ -534,9 +930,9 @@ myInput.onkeyup = function() {
 							
 
                             </div>
-                            <div class="tab-pane fade" id="nav-events" role="tabpanel" aria-labelledby="nav-events-tab">
+                            <div class="tab-pane fade" id="nav-events" role="tabpanel" aria-labelledby="nav-events-tab" style= "text-align: center;">
                                 <h6>Εισιτήρια μικρής διάρκειας (χωρίς μετακινήσεις προς Αεροδρόμιο)</h6>
-                                <table style="width:80%" color=#fff  >
+                                <table style="width:80%; margin-left:auto; margin-right:auto;">
 											  <tr>
 												<th></th>
 												<th>Ανώνυμη κάρτα (Ολόκληρο)</th>
@@ -614,7 +1010,7 @@ myInput.onkeyup = function() {
 										<br><br><br>
 										<h6>Εισιτήρια μικρής διάρκειας (με μετακινήσεις προς Αεροδρόμιο)</h6>
 										
-										<table style="width:80%" color=#fff  >
+										<table style="width:80%; margin-left:auto; margin-right:auto;">
 											<tr>
 												<th></th>
 												<th>Ανώνυμη κάρτα (Ολόκληρο)</th>
@@ -681,7 +1077,7 @@ myInput.onkeyup = function() {
 										<br><br><br>
 										<h6>Εισιτήρια μεγάλης διάρκειας</h6>
 										
-										<table style="width:80%" color=#fff  >
+										<table style="width:80%; margin-left:auto; margin-right:auto;">
 											<tr>
 												<th></th>
 												<th>Ανώνυμη κάρτα (Ολόκληρο)</th>
@@ -779,6 +1175,11 @@ myInput.onkeyup = function() {
                 </div>
             </div>
         </div>
+		
+		<?php				
+		}
+		
+        ?>
         <!-- Hero Social Btn -->
         <div class="hero-social-btn">
             <div class="social-title d-flex align-items-center">
@@ -1139,7 +1540,7 @@ myInput.onkeyup = function() {
   });
 }
 
-var countries = ["Μετρό-Ωράριο","Τραμ", "ΜΜΜ","ΑΜΕΑ-ΣτάσειςΜεΠροεξοχές-Καισαριανή","Μετρό-Στάσεις","Αγορά-Επαναφόρτιση", "Τιμές-Εισιτηρίων","ΑΜΕΑ-ΣτάσειςΜεΠροεξοχές-Παπάγος","ΑΜΕΑ-ΣτάσειςΜεΠροεξοχές-Ηλιούπολη","Βέλτιστη-Διαδρομή"];
+var countries = ["Μετρό-Ωράριο","Τραμ", "ΜΜΜ","ΑΜΕΑ-ΣτάσειςΜεΠροεξοχές-Καισαριανή","Μετρό-Στάσεις","Αγορά-Επαναφόρτιση", "Τιμές-Εισιτηρίων","ΑΜΕΑ-ΣτάσειςΜεΠροεξοχές-Παπάγος","ΑΜΕΑ-ΣτάσειςΜεΠροεξοχές-Ηλιούπολη", "Βέλτιστη-Διαδρομή","Δικαιολογητικά-Έκδοσης-Εισιτηρίων","Σημεία-Έκδοσης-Επαναφόρτισης"];
 
 
 autocomplete(document.getElementById("myInput"), countries);
