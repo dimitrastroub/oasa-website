@@ -180,7 +180,7 @@
 			<div class="profileinfo" >
 				<h2>Επεξεργασία Προφίλ&rarr;</h2>				
                 <?php 
-                        $db1=mysqli_connect('localhost','root','','test');
+                        $db1=mysqli_connect('localhost','root','','sdi1600021');
                         $email=$_SESSION['email'];
                          
                         
@@ -190,7 +190,7 @@
                           // output data of each row
                         while($row = mysqli_fetch_assoc($result5)) {?>
                  <?php
-                            $db=mysqli_connect('localhost','root','','test');
+                            $db=mysqli_connect('localhost','root','','sdi1600021');
                             $query42="SELECT `email` FROM `users` WHERE foititis='1'";
                             $result=mysqli_query($db,$query42);
                             if(mysqli_num_rows($result)==1){ ?>
@@ -199,7 +199,7 @@
                                 
       
                 <?php if(isset($_POST['check1'])){
-                    $db=mysqli_connect('localhost','root','','test');
+                    $db=mysqli_connect('localhost','root','','sdi1600021');
             $query13="UPDATE `users` SET `foititis`='1' WHERE email='$email'";
             
             mysqli_query($db,$query13); ?>
@@ -214,7 +214,7 @@
         ?>
         <!--amea-->
                  <?php
-                            $db=mysqli_connect('localhost','root','','test');
+                            $db=mysqli_connect('localhost','root','','sdi1600021');
                             $query42="SELECT `email` FROM `users` WHERE amea='1'";
                             $result=mysqli_query($db,$query42);
                             if(mysqli_num_rows($result)==1){ ?>
@@ -223,7 +223,7 @@
                                 
       
                 <?php if(isset($_POST['check2'])){
-                    $db=mysqli_connect('localhost','root','','test');
+                    $db=mysqli_connect('localhost','root','','sdi1600021');
             $query13="UPDATE `users` SET `amea`='1' WHERE email='$email'";
             
             mysqli_query($db,$query13); ?>
@@ -239,7 +239,7 @@
         
         <!--anergos-->
                  <?php
-                            $db=mysqli_connect('localhost','root','','test');
+                            $db=mysqli_connect('localhost','root','','sdi1600021');
                             $query42="SELECT `email` FROM `users` WHERE anergos='1'";
                             $result=mysqli_query($db,$query42);
                             if(mysqli_num_rows($result)==1){ ?>
@@ -248,7 +248,7 @@
                                 
       
                 <?php if(isset($_POST['check3'])){
-                    $db=mysqli_connect('localhost','root','','test');
+                    $db=mysqli_connect('localhost','root','','sdi1600021');
             $query13="UPDATE `users` SET `anergos`='1' WHERE email='$email'";
             
             mysqli_query($db,$query13); ?>
