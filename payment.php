@@ -142,7 +142,7 @@
                             </ul>
                             <?php
                             $db=mysqli_connect('localhost','root','','sdi1600021');
-                            $query42="SELECT `email` FROM `users` WHERE flag='1'";
+                            $query42="SELECT `email` FROM `users` WHERE flag='1' ";
                             $result=mysqli_query($db,$query42);
                             if(mysqli_num_rows($result)==1){
                                 
@@ -396,7 +396,10 @@ myInput.onkeyup = function() {
 
     <!-- ***** Header Area End ***** -->
 	<?php
-    if(isset($_POST['login'])){ ?>
+    $db=mysqli_connect('localhost','root','','sdi1600021');
+                            $query42="SELECT `email` FROM `users` WHERE flag='1' ";
+                            $result=mysqli_query($db,$query42);
+                            if(mysqli_num_rows($result) >0){ ?>
 		<section class="dorne-welcome-area bg-img" style="background-image: url(img/buy_ticket.jpg);">
 	
 		<div class="container h-100">
@@ -478,16 +481,17 @@ myInput.onkeyup = function() {
 								<input type="button"  onclick="myFunction()" value="Ολοκλήρωση αγοράς" style="width: 30%">
 								
 								<p id="demo1" style="color:white" ></p>
-								<?php
-                        }
-                        }
-                    
-                        ?>
+						
 							</div>
                           
 	</section>
     <?php
                         }
+                        }
+                    
+                        ?>
+    <?php
+                        } else {
                         
                     
                         ?>
@@ -578,6 +582,7 @@ myInput.onkeyup = function() {
 								
 							</div>
 	</section>
+                        <?php } ?>
     
 		
 	
