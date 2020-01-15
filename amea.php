@@ -164,7 +164,7 @@
                             <?php } else { ?>
                             <!-- Search btn -->
                             <?php 
-                            if(isset($_POST['login'])){ ?>
+                            if(isset($_POST['login']) && isset($_SESSION["email"]) ){ ?>
                                 <div class="dorne-search-btn">
                                 <a id="search-btn" href="#"><i class="fa fa-search" aria-hidden="true"></i>Αναζήτηση</a>
                             </div>
@@ -197,7 +197,7 @@
                         <!--login-->
 								<div id="id01" class="modal1">
 								  
-								  <form class="modal1-content animate" method="post" action="payment.php">
+								  <form class="modal1-content animate" method="post" action="amea.php">
 									<div class="imgcontainer">
 									  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
 									
@@ -255,7 +255,7 @@ $(document).ready(function(){
                             <!--signup-->
                             <div id="id02" class="modal1">
 								  
-								  <form class="modal1-content animate" method="post" action="Βέλτιστη-Διαδρομή.php"
+								  <form class="modal1-content animate" method="post" action="amea.php"
                                   oninput='password2.setCustomValidity(password2.value != password1.value ? "Οι κωδικοί δεν ταιριάζουν." : "")'>
 									<div class="imgcontainer">
 									  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
