@@ -70,7 +70,7 @@
 												<a class="dropdown-item" href="Μετρό-Ωράριο.php">Ωράριο</a>
 											</div>
 										</a>
-                                        <a class="dropdown-item" href="Υπο-κατασκευή.html">Τραμ</a>
+                                        <a class="dropdown-item" href="Yπο-κατασκευή.html">Τραμ</a>
                                         <a class="dropdown-item" href="Υπο-κατασκευή.html">Ηλεκτρικός Σιδηρόδρομος</a>
                                         <a class="dropdown-item" href="Υπo-κατασκευή.html">Προαστιακός</a>
                                         <a class="dropdown-item" href="Υπo-κατασκευή.html">Τρόλεϊ</a>
@@ -128,7 +128,7 @@
                                     </div>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="Υπo-κατασκευή.html">Ανακοινώσεις</a>
+                                    <a class="nav-link" href="Υπο-κατασκευή.html">Ανακοινώσεις</a>
                                 </li>
                                 
                                 <li class="nav-item">
