@@ -61,16 +61,20 @@
     if(isset($_POST['login'])){
         $email= mysqli_real_escape_string($db,$_POST['email']);
         $password= mysqli_real_escape_string($db,$_POST['password']);
-        
-        $query="UPDATE `users` SET `flag`='1' WHERE email='$email'";
-        mysqli_query($db,$query);
+     
         
         $query2="SELECT * FROM users WHERE email='$email' AND password='$password'";
         $result=mysqli_query($db,$query2);
         if(mysqli_num_rows($result)==1){
             $_SESSION['email']=$email;
+			
+			$query="UPDATE `users` SET `flag`='1' WHERE email='$email'";
+			mysqli_query($db,$query);
            
         }
+		else
+			header('location: Βέλτιστη-Διαδρομή.php');
+		
     }
         if(isset($_POST['savechanges'])){
         $pemail= mysqli_real_escape_string($db,$_POST['pemail']);
