@@ -191,9 +191,9 @@
                         while($row = mysqli_fetch_assoc($result5)) {?>
                  <?php
                             $db=mysqli_connect('localhost','root','','sdi1600021');
-                            $query42="SELECT `email` FROM `users` WHERE foititis='1'";
+                            $query42="SELECT `email` FROM `users` WHERE foititis='1' AND email='$email'";
                             $result=mysqli_query($db,$query42);
-                            if(mysqli_num_rows($result)==1){ ?>
+                            if(mysqli_num_rows($result)> 0){ ?>
                   <label style="font-size:15px; color:white;">Φοιτητής</label><input type="checkbox" name="check1" <?php echo 'checked="checked"'; ?> />   &nbsp; &nbsp;
                             <?php } else { ?>
                                 
@@ -215,9 +215,9 @@
         <!--amea-->
                  <?php
                             $db=mysqli_connect('localhost','root','','sdi1600021');
-                            $query42="SELECT `email` FROM `users` WHERE amea='1'";
+                            $query42="SELECT `email` FROM `users` WHERE amea='1' AND email='$email' ";
                             $result=mysqli_query($db,$query42);
-                            if(mysqli_num_rows($result)==1){ ?>
+                            if(mysqli_num_rows($result) > 0){ ?>
                   <label style="font-size:15px; color:white;">ΑΜΕΑ</label><input type="checkbox" name="check2" <?php echo 'checked="checked"'; ?> />   &nbsp; &nbsp;
                             <?php } else { ?>
                                 
@@ -240,9 +240,9 @@
         <!--anergos-->
                  <?php
                             $db=mysqli_connect('localhost','root','','sdi1600021');
-                            $query42="SELECT `email` FROM `users` WHERE anergos='1'";
+                            $query42="SELECT `email` FROM `users` WHERE anergos='1' AND email='$email' ";
                             $result=mysqli_query($db,$query42);
-                            if(mysqli_num_rows($result)==1){ ?>
+                            if(mysqli_num_rows($result) > 0){ ?>
                   <label style="font-size:15px; color:white;">Άνεργος</label><input type="checkbox" name="check3" <?php echo 'checked="checked"'; ?> />   &nbsp; &nbsp;
                             <?php } else { ?>
                                 
