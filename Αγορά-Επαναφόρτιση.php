@@ -213,7 +213,7 @@
                         <!--login-->
 								<div id="id01" class="modal1">
 								  
-								  <form class="modal1-content animate" method="post" action="Βέλτιστη-Διαδρομή.php">
+								  <form class="modal1-content animate" method="post" action="Αγορά-Επαναφόρτιση.php">
 									<div class="imgcontainer">
 									  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
 									
@@ -271,7 +271,7 @@ $(document).ready(function(){
                             <!--signup-->
                             <div id="id02" class="modal1">
 								  
-								  <form class="modal1-content animate" method="post" action="Βέλτιστη-Διαδρομή.php"
+								  <form class="modal1-content animate" method="post" action="Αγορά-Επαναφόρτιση.php"
                                   oninput='password2.setCustomValidity(password2.value != password1.value ? "Οι κωδικοί δεν ταιριάζουν." : "")'>
 									<div class="imgcontainer">
 									  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -403,9 +403,9 @@ myInput.onkeyup = function() {
 		
 		<?php
 		$db=mysqli_connect('localhost','root','','sdi1600021');
-        $query42="SELECT amea,foititis,anergos FROM `users` WHERE flag='1'";
+        $query42="SELECT amea,foititis,anergos FROM `users` WHERE flag='1' and (amea='1' || foititis='1' || anergos='1')";
         $result=mysqli_query($db,$query42);
-        if(mysqli_num_rows($result)==1){
+        if(mysqli_num_rows($result)==1  ){
          ?> 
 			<br><br>
 			<h2 style="text-align: center; font-size: 20px; " >Δικαιούσαι μειωμένο εισιτήριο!! </h2>
