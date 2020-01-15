@@ -138,7 +138,7 @@
                                 </li>
                             </ul>
                             <?php
-                            $db=mysqli_connect('localhost','root','','test');
+                            $db=mysqli_connect('localhost','root','','sdi1600021');
                             $query42="SELECT `email` FROM `users` WHERE flag='1'";
                             $result=mysqli_query($db,$query42);
                             if(mysqli_num_rows($result)==1){
@@ -159,6 +159,8 @@
                                             <p><a href="Βέλτιστη-Διαδρομή.php?logout='0' " style="color:red;">Αποσύνδεση</a></p>
                                             <p><a href="edit.php" name="edit" style="color:navy;" >Επεξεργασία Προφίλ</a></p>
                             </div>
+						</div>
+					 </nav>
                             <?php } else { ?>
                             <!-- Search btn -->
                             <?php 
@@ -188,7 +190,7 @@
                             </div>
                             <!-- Signin btn -->
                             <div class="dorne-signin-btn">
-                                <a onclick="document.getElementById('id01').style.display='block'" style="font-style:normal; color:white; font-weight:600;">Είσοδος/Εγγραφή</a>
+                                <a onclick="document.getElementById('id01').style.display='block'" style="font-style:normal; color:white; font-weight:600; cursor: default;">Είσοδος/Εγγραφή</a>
                             </div> 
 						
                         <!--login-->
@@ -199,7 +201,7 @@
 									  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
 									
 									</div>
-                                    <i style="font-weight:400; font-style:normal; font-size:20px; padding-left:18px;">Δεν είσαι μέλος;<a onclick="document.getElementById('id02').style.display='block'"><i style="color:lightblue; font-style:normal; font-size:20px;"> Εγγραφή</i></a></i>
+                                    <i style="font-weight:400; font-style:normal; font-size:20px; padding-left:18px;">Δεν είσαι μέλος;<a onclick="document.getElementById('id02').style.display='block'"><i style="color:lightblue; font-style:normal; font-size:20px; cursor: default;"> Εγγραφή</i></a></i>
 									<div class="container">
                                       
 									  <label for="uname" style="font-weight:400; font-size:20px;"><b>E-mail</b></label>
@@ -357,7 +359,13 @@ myInput.onkeyup = function() {
 
                         </div>
                     </nav>
-
+					<?php 
+                            } 
+                            ?>
+                            <?php 
+                            } 
+                            ?>
+							
 					<nav class="h-30 navbar navbar-expand-lg">
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dorneNav" aria-controls="dorneNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
                         <!-- Nav -->
@@ -371,12 +379,7 @@ myInput.onkeyup = function() {
 									<a class="nav-link" href="#"> > </a>
 									<a class="nav-link" href="Μετρό-Ωράριο.php"><span style="color:rgba(0, 85, 132,1); font-weight: bold; font-size:18px; ">Ωράριο</span></a>
                     </nav>
-                    <?php 
-                            } 
-                            ?>
-                            <?php 
-                            } 
-                            ?>
+                    
                 </div>
             </div>
         </div>
@@ -420,7 +423,7 @@ myInput.onkeyup = function() {
 									<?php
 								
 								
-									$db=mysqli_connect('localhost','root','','test');
+									$db=mysqli_connect('localhost','root','','sdi1600021');
 									
 							
 									$sql = "SELECT id, station, time1,time2,time3, station2, time4,time5 FROM wrario2";
@@ -462,7 +465,7 @@ myInput.onkeyup = function() {
 									<?php
 								
 								
-								$db=mysqli_connect('localhost','root','','test');
+								$db=mysqli_connect('localhost','root','','sdi1600021');
 									
 							
 									$sql = "SELECT id, station, time1,time2, station2, time4,time5 FROM wrario3";
@@ -597,7 +600,7 @@ myInput.onkeyup = function() {
   });
 }
 
-var countries = ["Μετρό-Ωράριο","Τραμ", "ΜΜΜ","ΑΜΕΑ-ΣτάσειςΜεΠροεξοχές-Καισαριανή","Μετρό-Στάσεις","Αγορά-Επαναφόρτιση", "Τιμές-Εισιτηρίων","ΑΜΕΑ-ΣτάσειςΜεΠροεξοχές-Παπάγος","ΑΜΕΑ-ΣτάσειςΜεΠροεξοχές-Ηλιούπολη","Βέλτιστη-Διαδρομή"];
+var countries = ["Μετρό-Ωράριο","Τραμ", "ΜΜΜ","ΑΜΕΑ-ΣτάσειςΜεΠροεξοχές-Καισαριανή","Μετρό-Στάσεις","Αγορά-Επαναφόρτιση", "Τιμές-Εισιτηρίων","ΑΜΕΑ-ΣτάσειςΜεΠροεξοχές-Παπάγος","ΑΜΕΑ-ΣτάσειςΜεΠροεξοχές-Ηλιούπολη", "Βέλτιστη-Διαδρομή","Δικαιολογητικά-Έκδοσης-Εισιτηρίων","Σημεία-Έκδοσης-Επαναφόρτισης"];
 
 
 autocomplete(document.getElementById("myInput"), countries);
