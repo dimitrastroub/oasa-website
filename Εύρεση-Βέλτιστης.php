@@ -72,9 +72,16 @@
 			mysqli_query($db,$query);
            
         }
-		else
-			header('location: Βέλτιστη-Διαδρομή.php');
-		
+		else{
+			
+			?>
+			<script>
+				window.alert("Λανθασμένος κωδικός εισόδου!\n Επιστροφή στην αρχική σελίδα");
+				document.location="Βέλτιστη-Διαδρομή.php";
+			</script>
+		<?php	
+			
+		}
     }
         if(isset($_POST['savechanges'])){
         $pemail= mysqli_real_escape_string($db,$_POST['pemail']);
