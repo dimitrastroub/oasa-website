@@ -69,11 +69,11 @@
 												<a class="dropdown-item" href="Μετρό-Ωράριο.php">Ωράριο</a>
 											</div>
 										</a>
-                                        <a class="dropdown-item" href="#">Τραμ</a>
-                                        <a class="dropdown-item" href="#">Ηλεκτρικός Σιδηρόδρομος</a>
-                                        <a class="dropdown-item" href="#">Προαστιακός</a>
-                                        <a class="dropdown-item" href="#">Τρόλεϊ</a>
-										<a class="dropdown-item" href="#">Λεωφορεία</a>
+                                        <a class="dropdown-item" href="Υπo-κατασκευή.html">Τραμ</a>
+                                        <a class="dropdown-item" href="Υπo-κατασκευή.html">Ηλεκτρικός Σιδηρόδρομος</a>
+                                        <a class="dropdown-item" href="Υπo-κατασκευή.html">Προαστιακός</a>
+                                        <a class="dropdown-item" href="Υπo-κατασκευή.html">Τρόλεϊ</a>
+										<a class="dropdown-item" href="Υπo-κατασκευή.html">Λεωφορεία</a>
                                         
                                     </div>
                                 </li>
@@ -90,48 +90,48 @@
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">ΑΜΕΑ <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
 									<a class="dropdown-item" href="amea.php">Πληροφορίες για ΑΜΕΑ</a>	
-                                        <a class="dropdown-item" href="#">Ανελκυστήρες</a>
+                                        <a class="dropdown-item" href="Υπo-κατασκευή.html">Ανελκυστήρες</a>
 										
 										<a class="dropdown-item" <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Στάσεις με Προεξοχές <i class="fa fa-angle-down" aria-hidden="true"></i></a>
 											<div class="dropdown-menu" x-placement="right-start" style="position: absolute; transform: translate3d(230px, 30px, 0px); top: 4px; left: 35px; will-change: transform;" >
                                                 <form action="#" method="get">
 												<select  class="sel" size=10 onchange="window.location = this.value;" >
 													<option value="#" selected>Επιλέξτε Δήμο...</option>
-													<option value="#">Δήμος Αγίας Βαρβάρας</option>
-													<option value="#">Δήμος Αγίου Δημήτριου</option>
-													<option value="#">Δήμος Αθηνών</option>
-													<option value="#">Δήμος Ελληνικού-Αργυρούπολης</option>
-													<option value="#">Δήμος Αχαρνών</option>
-													<option value="#">Δήμος Βύρωνα</option>
-													<option value="#">Δήμος Γλυφάδας</option>
-													<option value="#">Δήμος Δάφνης-Υμηττού</option>
-													<option value="#">Δήμος Ζωγράφου</option>
+													<option value="Υπo-κατασκευή.html">Δήμος Αγίας Βαρβάρας</option>
+													<option value="Υπo-κατασκευή.html">Δήμος Αγίου Δημήτριου</option>
+													<option value="Υπo-κατασκευή.html">Δήμος Αθηνών</option>
+													<option value="Υπo-κατασκευή.html">Δήμος Ελληνικού-Αργυρούπολης</option>
+													<option value="Υπo-κατασκευή.html">Δήμος Αχαρνών</option>
+													<option value="Υπo-κατασκευή.html">Δήμος Βύρωνα</option>
+													<option value="Υπo-κατασκευή.html">Δήμος Γλυφάδας</option>
+													<option value="Υπo-κατασκευή.html">Δήμος Δάφνης-Υμηττού</option>
+													<option value="Υπo-κατασκευή.html">Δήμος Ζωγράφου</option>
 													<option value="ΑΜΕΑ-ΣτάσειςΜεΠροεξοχές-Ηλιούπολη.php">Δήμος Ηλιούπολης</option> 
 													<option value="ΑΜΕΑ-ΣτάσειςΜεΠροεξοχές-Καισαριανή.php">Δήμος Καισαριανής</option>
-													<option value="#">Δήμος Καλλιθέας</option>
-													<option value="#">Δήμος Μελλισίων</option>
-													<option value="#">Δήμος Νέας Σμύρνης</option>
-													<option value="#">Δήμος Νέας Χαλκηδόνας-Νέας Φιλαδέφλιας</option>
-													<option value="#">Δήμος Νίκαιας</option>
+													<option value="Υπo-κατασκευή.html">Δήμος Καλλιθέας</option>
+													<option value="Υπo-κατασκευή.html">Δήμος Μελλισίων</option>
+													<option value="Υπo-κατασκευή.html">Δήμος Νέας Σμύρνης</option>
+													<option value="Υπo-κατασκευή.html">Δήμος Νέας Χαλκηδόνας-Νέας Φιλαδέφλιας</option>
+													<option value="Υπo-κατασκευή.html">Δήμος Νίκαιας</option>
 													<option value="ΑΜΕΑ-ΣτάσειςΜεΠροεξοχές-Παπάγος.php">Δήμος Παπάγου-Χολαργού</option>
-													<option value="#">Δήμος Παλαιού Φαλήρου</option>
-													<option value="#">Δήμος Πειραιά</option>
-													<option value="#">Δήμος Περάματος</option>
-													<option value="#">Δήμος Περιστερίου</option>
-													<option value="#">Δήμος Πετρούπολης</option>
+													<option value="Υπo-κατασκευή.html">Δήμος Παλαιού Φαλήρου</option>
+													<option value="Υπo-κατασκευή.html">Δήμος Πειραιά</option>
+													<option value="Υπo-κατασκευή.html">Δήμος Περάματος</option>
+													<option value="Υπo-κατασκευή.html">Δήμος Περιστερίου</option>
+													<option value="Υπo-κατασκευή.html">Δήμος Πετρούπολης</option>
 												</select>
                                             </form>   
 											</div>
 										
-                                        <a class="dropdown-item" href="#">Οδηγίες Προσέγγισης στα ΜΜΜ</a>
+                                        <a class="dropdown-item" href="Υπo-κατασκευή.html">Οδηγίες Προσέγγισης στα ΜΜΜ</a>
                                     </div>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Ανακοινώσεις</a>
+                                    <a class="nav-link" href="Υπo-κατασκευή.html">Ανακοινώσεις</a>
                                 </li>
                                 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Επικοινωνία</a>
+                                    <a class="nav-link" href="Υπo-κατασκευή.html">Επικοινωνία</a>
                                 </li>
                             </ul>
                             <!-- Search btn -->
