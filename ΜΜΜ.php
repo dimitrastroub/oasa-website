@@ -194,7 +194,7 @@
                         <!--login-->
 								<div id="id01" class="modal1">
 								  
-								  <form class="modal1-content animate" method="post" action="Βέλτιστη-Διαδρομή.php">
+								  <form class="modal1-content animate" method="post" action="ΜΜΜ.php">
 									<div class="imgcontainer">
 									  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
 									
@@ -252,7 +252,7 @@ $(document).ready(function(){
                             <!--signup-->
                             <div id="id02" class="modal1">
 								  
-								  <form class="modal1-content animate" method="post" action="Βέλτιστη-Διαδρομή.php"
+								  <form class="modal1-content animate" method="post" action="ΜΜΜ.php"
                                   oninput='password2.setCustomValidity(password2.value != password1.value ? "Οι κωδικοί δεν ταιριάζουν." : "")'>
 									<div class="imgcontainer">
 									  <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
