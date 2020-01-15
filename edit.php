@@ -189,31 +189,77 @@
                         if (mysqli_num_rows($result5) > 0) {
                           // output data of each row
                         while($row = mysqli_fetch_assoc($result5)) {?>
-                <label style="font-size:15px; color:white;">Φοιτητής</label><input type="checkbox" name="check1">  &nbsp; &nbsp;
+                 <?php
+                            $db=mysqli_connect('localhost','root','','test');
+                            $query42="SELECT `email` FROM `users` WHERE foititis='1'";
+                            $result=mysqli_query($db,$query42);
+                            if(mysqli_num_rows($result)==1){ ?>
+                  <label style="font-size:15px; color:white;">Φοιτητής</label><input type="checkbox" name="check1" <?php echo 'checked="checked"'; ?> />   &nbsp; &nbsp;
+                            <?php } else { ?>
+                                
+      
                 <?php if(isset($_POST['check1'])){
                     $db=mysqli_connect('localhost','root','','test');
             $query13="UPDATE `users` SET `foititis`='1' WHERE email='$email'";
             
-            mysqli_query($db,$query13);
+            mysqli_query($db,$query13); ?>
+            <label style="font-size:15px; color:white;">Φοιτητής</label><input type="checkbox" name="check1" <?php echo 'checked="checked"'; ?> />   &nbsp; &nbsp;
+             
+        <?php
         
-        
-        } ?>
-                 <label style="font-size:15px; color:white;">ΑΜΕΑ</label><input type="checkbox" name="check2"> &nbsp; &nbsp;
-                 <?php if(isset($_POST['check2'])){
+        } else { ?>
+        <label style="font-size:15px; color:white;">Φοιτητής</label><input type="checkbox" name="check1">  &nbsp; &nbsp;
+        <?php } 
+                            }
+        ?>
+        <!--amea-->
+                 <?php
+                            $db=mysqli_connect('localhost','root','','test');
+                            $query42="SELECT `email` FROM `users` WHERE amea='1'";
+                            $result=mysqli_query($db,$query42);
+                            if(mysqli_num_rows($result)==1){ ?>
+                  <label style="font-size:15px; color:white;">ΑΜΕΑ</label><input type="checkbox" name="check2" <?php echo 'checked="checked"'; ?> />   &nbsp; &nbsp;
+                            <?php } else { ?>
+                                
+      
+                <?php if(isset($_POST['check2'])){
                     $db=mysqli_connect('localhost','root','','test');
             $query13="UPDATE `users` SET `amea`='1' WHERE email='$email'";
-            mysqli_query($db,$query13);
+            
+            mysqli_query($db,$query13); ?>
+            <label style="font-size:15px; color:white;">ΑΜΕΑ</label><input type="checkbox" name="check2" <?php echo 'checked="checked"'; ?> />   &nbsp; &nbsp;
+             
+        <?php
         
+        } else { ?>
+        <label style="font-size:15px; color:white;">ΑΜΕΑ</label><input type="checkbox" name="check2">  &nbsp; &nbsp;
+        <?php } 
+                            }
+        ?>
         
-        } ?>
-                 <label style="font-size:15px; color:white;">Άνεργος</label><input type="checkbox" name="check3">
-                 <?php if(isset($_POST['anergos'])){
+        <!--anergos-->
+                 <?php
+                            $db=mysqli_connect('localhost','root','','test');
+                            $query42="SELECT `email` FROM `users` WHERE anergos='1'";
+                            $result=mysqli_query($db,$query42);
+                            if(mysqli_num_rows($result)==1){ ?>
+                  <label style="font-size:15px; color:white;">Άνεργος</label><input type="checkbox" name="check3" <?php echo 'checked="checked"'; ?> />   &nbsp; &nbsp;
+                            <?php } else { ?>
+                                
+      
+                <?php if(isset($_POST['check3'])){
                     $db=mysqli_connect('localhost','root','','test');
-            $query13="UPDATE `users` SET `foititis`='1' WHERE email='$email'";
-            mysqli_query($db,$query13);
+            $query13="UPDATE `users` SET `anergos`='1' WHERE email='$email'";
+            
+            mysqli_query($db,$query13); ?>
+            <label style="font-size:15px; color:white;">Άνεργος</label><input type="checkbox" name="check3" <?php echo 'checked="checked"'; ?> />   &nbsp; &nbsp;
+             
+        <?php
         
-        
-        } ?>
+        } else { ?>
+        <label style="font-size:15px; color:white;">Άνεργος</label><input type="checkbox" name="check3">  &nbsp; &nbsp;
+        <?php } 
+                            }    ?>
 				<div class="gear">
 					<label id='label1'>Αρχικό E-Mail:</label>
 					<input name="pemail" type="text" class="datainfo" style="color:black;" value="<?php echo $row["email"]; ?>"/>
