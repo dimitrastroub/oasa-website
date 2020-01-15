@@ -1,3 +1,4 @@
+<?php include ('Εύρεση-Βέλτιστης.php'); ?>
 <!DOCTYPE html>
 <html lang="el">
 
@@ -24,10 +25,10 @@
     <link rel="icon" href="img/logo.png">
 
     <!-- Core Stylesheet -->
-    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet"  href="style.css?v=<?php echo time(); ?>">
 
     <!-- Responsive CSS -->
-    <link href="css/responsive/responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/responsive/responsive.css?v=<?php echo time(); ?>">
 
 </head>
 
@@ -145,6 +146,29 @@
                                     <a class="nav-link" href="#">Επικοινωνία</a>
                                 </li>
                             </ul>
+                            <?php
+                            $db=mysqli_connect('localhost','root','','test');
+                            $query42="SELECT `email` FROM `users` WHERE flag='1'";
+                            $result=mysqli_query($db,$query42);
+                            if(mysqli_num_rows($result)==1){
+                                
+                            ?>
+                            <div class="dorne-search-btn">
+                                <a id="search-btn" href="#"><i class="fa fa-search" aria-hidden="true"></i>Αναζήτηση</a>
+                            </div>
+                            <div class="content">
+                                       <style>
+                                       p{
+                                           margin: 0;
+                                       }
+                                       </style>
+                                      
+                                            <p><a style="color:white;">Καλωσήρθες</p> 
+                                            <p><strong><?php echo $_SESSION['email']; ?></a></strong></p>
+                                            <p><a href="Βέλτιστη-Διαδρομή.php?logout='0' " style="color:red;">Αποσύνδεση</a></p>
+                                            <p><a href="edit.php" name="edit" style="color:navy;" >Επεξεργασία Προφίλ</a></p>
+                            </div>
+                            <?php } else { ?>
                             <!-- Search btn -->
                             <?php 
                             if(isset($_POST['login'])){ ?>
@@ -161,7 +185,7 @@
                                         <?php if(isset($_SESSION["email"])): ?>
                                             <p><a style="color:white;">Καλωσήρθες</p> 
                                             <p><strong><?php echo $_SESSION['email']; ?></a></strong></p>
-                                            <p><a href="Βέλτιστη-Διαδρομή.php" style="color:red;">Αποσύνδεση</a></p>
+                                            <p><a href="Βέλτιστη-Διαδρομή.php?logout='0' " style="color:red;">Αποσύνδεση</a></p>
                                             <p><a href="edit.php" name="edit" style="color:navy;" >Επεξεργασία Προφίλ</a></p>
                                         <?php endif ?>
                     </div>
@@ -340,9 +364,6 @@ myInput.onkeyup = function() {
                             
                         </div>
                     </nav>
-                    <?php 
-                            } 
-                            ?>
 					<nav class="h-30 navbar navbar-expand-lg">
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#dorneNav" aria-controls="dorneNav" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
                         <!-- Nav -->
@@ -350,11 +371,17 @@ myInput.onkeyup = function() {
                             <ul class="navbar-nav mr-auto" id="dorneMenu">
                                     <a class="nav-link" href="Βέλτιστη-Διαδρομή.php" style="font-weight: bold; font-size:18px; ">Αρχική </a>
 									<a class="nav-link" href="#"> > </a>
-									<a class="nav-link" href="#" style="font-weight: bold; font-size:18px; ">Εισητήρια </a>
+									<a class="nav-link" href="#" style="font-weight: bold; font-size:18px; ">Εισιτήρια </a>
 									<a class="nav-link" href="#"> > </a>
-									<a class="nav-link" href="Τιμές-Εισιτηρίων.php"><span style="color:rgba(0, 85, 132,1); font-weight: bold; font-size:18px; ">Τιμές εισητηρίων</span></a>
+									<a class="nav-link" href="Τιμές-Εισιτηρίων.php"><span style="color:rgba(0, 85, 132,1); font-weight: bold; font-size:18px; ">Τιμές εισιτηρίων</span></a>
 						</div>
                     </nav>
+                    <?php 
+                            } 
+                            ?>
+                            <?php 
+                            } 
+                            ?>
                 </div>
             </div>
         </div>
