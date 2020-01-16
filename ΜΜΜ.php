@@ -16,10 +16,10 @@
     <link rel="icon" href="img/logo.png">
 
     <!-- Core Stylesheet -->
-    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet"  href="style.css?v=<?php echo time(); ?>">
 
     <!-- Responsive CSS -->
-    <link href="css/responsive/responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/responsive/responsive.css?v=<?php echo time(); ?>">
 
 </head>
 
